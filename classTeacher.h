@@ -1,5 +1,5 @@
-#ifndef CLASSTEACHER
-#define CLASSTEACHER
+#ifndef CLASSTEACHER_H
+#define CLASSTEACHER_H
 
 using namespace std;
 
@@ -16,5 +16,5 @@ public:
 
 };
 
-#endif // CLASSTEACHER
+#endif // CLASSTEACHER_H
 
