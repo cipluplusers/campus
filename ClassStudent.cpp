@@ -10,12 +10,12 @@ public:
     
     string name;
     string surname;
-    string second_name;
+    string secondName;
     string dateOfBirth;
     string id;
-    string department_id;
-    string diary_id;
-    string learningProgramming_id;
+    string departmentId;
+    string diaryId;
+    string learningProgrammingId;
     string courseStartDate;
     
 };
