@@ -11,9 +11,4 @@ public:
     string Subject;
 };
 
-int main()
-{
-    
-}
-
 #endif
