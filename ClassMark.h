@@ -1,6 +1,7 @@
 #ifndef CLASSMARK_H
 #define CLASSMARK_H
 
+
 using namespace std;
 
 
@@ -12,5 +13,6 @@ public:
 	string teacherId;
 	int value;
 };
+
 
 #endif
