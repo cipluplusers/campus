@@ -1,5 +1,5 @@
-#ifndef ClassStudent_h
-#define ClassStudent_h
+#ifndef CLASSSTUDENT_H
+#define CLASSSTUDENT_H
 
 using namespace std;
 
@@ -11,12 +11,11 @@ public:
     string surname;
     string secondName;
     string dateOfBirth;
-    string id;
-    string departmentId;
-    string diaryId;
-    string learningProgrammingId;
     string courseStartDate;
-    
+    unsigned long id;
+    unsigned long departmentId;
+    unsigned long diaryId;
+    unsigned long learningProgrammingId;
 };
 
-#endif /* ClassStudent_h */
+#endif /* CLASSSTUDENT_H */
