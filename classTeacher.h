@@ -1,5 +1,5 @@
-#ifndef ClassTeacher
-#define ClassTeacher
+#ifndef CLASSTEACHER
+#define CLASSTEACHER
 
 using namespace std;
 
@@ -16,5 +16,5 @@ public:
 
 };
 
-#endif // ClassTeacher
+#endif // CLASSTEACHER
 
