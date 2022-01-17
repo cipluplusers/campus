@@ -10,8 +10,3 @@ public:
     int ID;
     string Subject;
 };
-
-int main()
-{
-    
-}
