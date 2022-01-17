@@ -10,9 +10,4 @@ Date::Date(int valueDay, int valueMonth, int valueYear)
     year = valueYear;
 }
 
-int main()
-{
-    Date birthday(6, 1, 2004);
-    
-    birthday.PrintDate();
-}
+
