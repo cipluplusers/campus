@@ -10,9 +10,9 @@ public:
 	string surname;
 	string secondName;
 	string dateOfBirght;
-	int id;
-	int departmentId;
-	int subjectId;
+	string id;
+	string departmentId;
+	string subjectId;
 
 };
 
