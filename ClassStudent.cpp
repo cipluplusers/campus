@@ -1,27 +1,13 @@
 #include <iostream>
 #include <string>
+#include "ClassStudent.h"
 
 using namespace std;
 
 
-class Student
-{
-public:
-    
-    string name;
-    string surname;
-    string secondName;
-    string dateOfBirth;
-    string id;
-    string departmentId;
-    string diaryId;
-    string learningProgrammingId;
-    string courseStartDate;
-    
-};
-
-
 int main()
 {
-
+    Student Olya;
+    Olya.name = "Olya";
+    cout << Olya.name << endl;
 }
