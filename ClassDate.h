@@ -1,5 +1,5 @@
-#ifndef ClassDate_h
-#define ClassDate_h
+#ifndef CLASSDATE_H
+#define CLASSDATE_H
 
 using namespace std;
 
@@ -24,10 +24,7 @@ public:
     int getYear() { return year; }
     void setYear(int valueYear) { year = valueYear; }
     
-    void PrintDate()
-    {
-        cout << "Date: " << day << "/" << month << "/"  << year << endl;
-    }
+    void PrintDate();
   
 };
 

@@ -10,4 +10,9 @@ Date::Date(int valueDay, int valueMonth, int valueYear)
     year = valueYear;
 }
 
+void Date::PrintDate()
+{
+    cout << "Date: " << day << "/" << month << "/"  << year << endl;
+}
+
 
