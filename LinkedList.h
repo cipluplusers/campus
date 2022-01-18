@@ -3,7 +3,6 @@
 
 using namespace std;
 
-
 struct Node
 {
 	int data;
@@ -11,11 +10,13 @@ struct Node
 	Node* prev;
 };
 
+template <class T>
+
 class LinkedList
 {
 public:
 
-	Node* head;
+	T* head;
 
 public:
 
