@@ -7,7 +7,7 @@ class Diary {
 public:
 
     unsigned long id;
-    string studentId;
+    unsigned long studentId;
     int marks;
 };
 
