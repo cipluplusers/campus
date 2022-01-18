@@ -10,8 +10,8 @@ public:
     string name;
     string surname;
     string secondName;
-    string dateOfBirth;
-    string courseStartDate;
+    Date dateOfBirth;
+    Date courseStartDate;
     unsigned long id;
     unsigned long departmentId;
     unsigned long diaryId;
