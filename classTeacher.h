@@ -9,7 +9,7 @@ public:
 	string name;
 	string surname;
 	string secondName;
-	string dateOfBirght;
+	Date dateOfBirght;
 	unsigned long id;
 	unsigned long departmentId;
 	unsigned long subjectId;
