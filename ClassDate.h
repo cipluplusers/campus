@@ -28,4 +28,8 @@ public:
   
 };
 
-#endif /* ClassDate_h */
+bool operator==(Date &d1, Date &d2);
+bool operator<(Date &d1, Date &d2);
+bool operator>(Date &d1, Date &d2);
+
+#endif /* CCLASSDATE_H */
