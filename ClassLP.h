@@ -7,7 +7,7 @@ class LearningProgram
 {
 public:
     
-    unsigned long ID;
+    unsigned long Id;
     string Subject;
 };
 
