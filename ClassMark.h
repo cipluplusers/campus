@@ -9,8 +9,8 @@ class Mark {
 public:
 
 	unsigned long id;
-	string subjectId;
-	string teacherId;
+	unsigned long subjectId;
+	unsigned long teacherId;
 	int value;
 };
 
