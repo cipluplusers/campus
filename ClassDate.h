@@ -29,6 +29,7 @@ public:
 };
 
 bool operator==(Date &d1, Date &d2);
+bool operator<(Date &d1, Date &d2);
+bool operator>(Date &d1, Date &d2);
 
 #endif /* CCLASSDATE_H */
-
