@@ -53,7 +53,7 @@ public:
 	{
 		if (head == nullptr)
 		{
-			cout << "\nСписок пуст\n\n";
+			cout << "\nList is empty\n\n";
 			return 0;
 		}
 
@@ -76,11 +76,11 @@ public:
 
 	void printList()
 	{
-		if (head == nullptr) cout << "\nСписок пуст\n\n";
+		if (head == nullptr) cout << "\nList is empty\n\n";
 		else
 		{
 			Node* current = head;
-			cout << "\nЭлементы списка: ";
+			cout << "\nList: ";
 			do
 			{
 				cout << current->data << " ";
