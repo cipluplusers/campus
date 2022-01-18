@@ -28,27 +28,30 @@ bool operator==(Date &d1, Date &d2)
 
 bool operator<(Date &d1, Date &d2)
 {
-    if ( d1.getYear() < d2.getYear() )
+    if ( d1.getYear() > d2.getYear() )
     {
-        return true;
+        return false;
     }
-    else if ( d1.getMonth() < d2.getMonth() )
+    else if ( d1.getMonth() > d2.getMonth() )
     {
-        return true;
+        return false;
     }
-    else if ( d1.getDay() < d2.getDay() )
+    else if ( d1.getDay() > d2.getDay() )
     {
-        return true;
+        return false;
+    }
+    else if (d1 == d2)
+    {
+        return false;
     }
     
-    return false;
+    return true;
 }
 
 
 bool operator>(Date &d1, Date &d2)
 {
+    if (d1 == d2) { return false; }
+    
     return !(d1 < d2);
 }
-
-
-
