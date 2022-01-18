@@ -24,8 +24,11 @@ public:
     int getYear() { return year; }
     void setYear(int valueYear) { year = valueYear; }
     
-    void PrintDate();
+    void printDate();
+
+    string getString();
   
+
 };
 
 bool operator==(Date &d1, Date &d2);

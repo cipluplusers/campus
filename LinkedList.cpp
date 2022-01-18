@@ -1,6 +1,7 @@
+
 #include "LinkedList.h"
 
-void addToPosition(int value, int position)
+void Node::addToPosition(int value, int position)
 {
     Node* node = new Node;
     node->data = value;
@@ -24,7 +25,7 @@ void addToPosition(int value, int position)
     }
 }
 
-int deleteFromPosition(int position)
+int Node::deleteFromPosition(int position)
 {
     if (head == nullptr)
     {
@@ -48,7 +49,7 @@ int deleteFromPosition(int position)
     }
 }
 
-void printList()
+void Node::printList()
 {
     if (head == nullptr) cout << "\nList is empty\n\n";
     else

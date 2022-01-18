@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 #include "ClassDate.h"
 
 using namespace std;
@@ -12,9 +13,18 @@ Date::Date(int valueDay, int valueMonth, int valueYear)
 }
 
 
-void Date::PrintDate()
+void Date::printDate()
 {
     cout << "Date: " << day << "/" << month << "/"  << year << endl;
+}
+
+string Date::getString()
+{
+    string sday = to_string(day);
+    string smonth = to_string(month);
+    string syear = to_string(year);
+    string str = sday + "." + smonth + "." + syear;
+        return str;
 }
 
 
