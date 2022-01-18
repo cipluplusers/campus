@@ -10,7 +10,6 @@ public:
     string surname;
     string secondName;
     Date dateOfBirght;
-    Date dateOfBirght;
     unsigned long Id;
     unsigned long departmentId;
     unsigned long subjectId;
