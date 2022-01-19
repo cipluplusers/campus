@@ -6,9 +6,9 @@
 
 string LearningProgram::toString()
 {
-	string strId = to_string(Id);
-	string strSubject = Subject.head.data;
-	string allData = strSubject + " " + strId;
+	string strId = to_string(id);
+	string strSubject = subjects.head.data;
+	string allData = title + strSubject + " " + strId;
 	return allData;
 }
 

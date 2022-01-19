@@ -1,9 +1,9 @@
-#ifndef CLASSDATEBASE
-#define CLASSDATEBASE
+#ifndef CLASSDATABASE
+#define CLASSDATABASE
 
 using namespace std;
 
-class DateBase
+class DataBase
 {
 private:
 	LinkedList<Student> students;
@@ -74,22 +74,22 @@ public:
 	}
 
 
-	void loadDateBase();
-	void unloadDateBase();
+	void loadDataBase();
+	void unloadDataBase();
 	Student addStudent();
-	Student delStudent();
+	void removeStudent();
 	Teacher addTeacher();
-	Teacher delTeacher();
+	void removeTeacher();
 	Diary addDiary();
-	Diary delDiary();
+	void removeDiary();
 	Department addDepartment();
-	Department delDepartment();
+	void removeDepartment();
 	Mark addMark();
-	Mark delMark();
+	void removeMark();
 	LearningProgram addLearningProgram();
-	LearningProgram delLearningProgram();
+	void removeLearningProgram();
 	Subject addSubject();
-	Subject delSubject();
+	void removeSubject();
 };
 
 

@@ -13,7 +13,7 @@ string Student::toString()
 	string strId = to_string(id);
 	string strDiaryId = to_string(diaryId);
 	string strDepartmentId = to_string(departmentId);
-	string strLearningProgrammingId = to_string(learningProgrammingId);
+	string strLearningProgrammingId = to_string(learningProgrammId);
 	string allData = strName + " " + strSurname + " " + strSecondName + " " + strDateOfBirht + " " +
 		strCourseStartDate + " " + strId + " " + strDepartmentId + " " + strDiaryId + " " + strLearningProgrammingId;
 	return allData;

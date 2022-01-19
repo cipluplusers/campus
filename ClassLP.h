@@ -7,9 +7,9 @@ using namespace std;
 class LearningProgram
 {
 public:
-    
-    unsigned long Id;
-    LinkedList<string> Subject;
+    string title;
+    unsigned long id;
+    LinkedList<string> subjects;
 
     string toString();
 
