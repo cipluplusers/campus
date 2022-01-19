@@ -1,6 +1,7 @@
 #ifndef CLASSLEARNINGPROGRAM_H
 #define CLASSLEARNINGPROGRAM_H
 
+
 using namespace std;
 
 class LearningProgram
@@ -8,7 +9,7 @@ class LearningProgram
 public:
     
     unsigned long Id;
-    string Subject;
+    LinkedList<string> Subject;
 
     string toString();
 
