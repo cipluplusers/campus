@@ -3,6 +3,7 @@
 #include <iostream>
 #include <string>
 
+
 string LearningProgram::toString()
 {
 	string strId = to_string(Id);
