@@ -6,13 +6,13 @@ using namespace std;
 class DateBase
 {
 private:
-	Student students;
-	Teacher teachers;
-	Mark marks;
-	LearningProgram learningPrograms;
-	Department departments;
-	Diary diaries;
-	Subject subjects;
+	LinkedList<Student> students;
+	LinkedList<Teacher> teachers;
+	LinkedList<Mark> marks;
+	LinkedList<LearningProgram> learningPrograms;
+	LinkedList<Department> departments;
+	LinkedList<Diary> diaries;
+	LinkedList<Subject> subjects;
 
 public:
 
