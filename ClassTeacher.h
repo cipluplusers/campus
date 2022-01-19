@@ -15,6 +15,9 @@ public:
     unsigned long subjectId;
 
     string toString();
+
+	friend std::ostream& operator<< (std::ostream& out, const Teacher& teacher);
+
 };
 
 #endif // CLASSTEACHER_H

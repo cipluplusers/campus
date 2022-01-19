@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-#include "classTeacher.h"
+#include "ClassTeacher.h"
 #include "ClassDate.h"
 
 string Teacher::toString()
@@ -15,4 +15,11 @@ string Teacher::toString()
 	string allData = strName + " " + strSurname + " " + strSecondName + " " + strDateOfBirht + " " +
 		strId + " " + strDepartmentId + " " + strSubjectId;
 	return allData;
+}
+
+std::ostream& operator<< (std::ostream& out, const Teacher& teacher)
+{
+	out << teacher.toString() << endl;
+
+	return out;
 }

@@ -7,9 +7,11 @@ class Diary {
 public:
     unsigned long id;
     unsigned long studentId;
-    int marks;
+    LinkedList<int> Marks;
 
     string toString();
+
+	friend std::ostream& operator<< (std::ostream& out, const Diary& diary);
 };
 
 #endif /* CLASSDIARY_H */

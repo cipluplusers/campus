@@ -18,6 +18,9 @@ public:
     unsigned long learningProgrammingId;
 
     string toString();
+
+	friend std::ostream& operator<< (std::ostream& out, const Student& student);
+
 };
 
 #endif /* CLASSSTUDENT_H */
