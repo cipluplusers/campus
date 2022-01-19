@@ -2,7 +2,7 @@
 
 template <typename T>
 
-void Node::addToPosition(T value, T position)
+void Node::addToPosition(T value, int position)
 {
     Node* node = new Node;
     node->data = value;
@@ -26,9 +26,8 @@ void Node::addToPosition(T value, T position)
     }
 }
 
-template <typename T>
 
-int Node::deleteFromPosition(T position)
+int Node::deleteFromPosition(int position)
 {
     if (head == nullptr)
     {
