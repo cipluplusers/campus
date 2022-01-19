@@ -1,0 +1,8 @@
+#include "ClassDateBase.h"
+#include "ClassDepartment.h"
+#include "ClassDiary.h"
+#include "ClassLP.h"
+#include "ClassMark.h"
+#include "ClassStudent.h"
+#include "ClassSubject.h"
+#include "ClassTeacher.h"
