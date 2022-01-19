@@ -16,7 +16,7 @@ private:
 
 public:
 
-	Student getStudent() 
+	Student getStudents() 
 	{ 
 		return students; 
 	}
@@ -24,7 +24,7 @@ public:
 	{ 
 		students = valueStudents;
 	}
-	Teacher getTeacher()
+	Teacher getTeachers()
 	{
 		return teachers; 
 	}
@@ -32,7 +32,7 @@ public:
 	{
 		teachers = valueTeachers;
 	}
-	Mark getMark()
+	Mark getMarks()
 	{
 		return marks;
 	}
@@ -40,7 +40,7 @@ public:
 	{
 		marks = valueMarks;
 	}
-	LearningProgram getLearningProgram()
+	LearningProgram getLearningPrograms()
 	{
 		return learningPrograms;
 	}
@@ -48,7 +48,7 @@ public:
 	{
 		learningPrograms = valueLearningPrograms;
 	}
-	Department getDepartment()
+	Department getDepartments()
 	{
 		return departments;
 	}
@@ -56,7 +56,7 @@ public:
 	{
 		departments = valueDepartments;
 	}
-	Diary getDiary()
+	Diary getDiaries()
 	{
 		return diaries;
 	}
@@ -64,7 +64,7 @@ public:
 	{
 		diaries = valueDiaries;
 	}
-	Subject getSubject()
+	Subject getSubjects()
 	{
 		return subjects;
 	}
