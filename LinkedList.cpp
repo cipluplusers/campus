@@ -1,7 +1,8 @@
-
 #include "LinkedList.h"
 
-void Node::addToPosition(int value, int position)
+template <typename T>
+
+void Node::addToPosition(T value, int position)
 {
     Node* node = new Node;
     node->data = value;
@@ -24,6 +25,7 @@ void Node::addToPosition(int value, int position)
         p->prev = node;
     }
 }
+
 
 int Node::deleteFromPosition(int position)
 {
@@ -48,6 +50,7 @@ int Node::deleteFromPosition(int position)
         delete a;
     }
 }
+
 
 void Node::printList()
 {
