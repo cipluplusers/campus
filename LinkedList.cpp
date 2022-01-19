@@ -1,10 +1,8 @@
 #include "LinkedList.h"
 
-template <typename T>
-
-void T::addToPosition(int value, int position)
+void Node::addToPosition(int value, int position)
 {
-    T* node = new T;
+    Node* node = new Node;
     node->data = value;
     if (head == nullptr)
     {
@@ -14,7 +12,7 @@ void T::addToPosition(int value, int position)
     }
     else
     {
-        T* p = head;
+        Node* p = head;
         for (int i = position; i > 1; i--)
         {
             p = p->next;
@@ -26,9 +24,9 @@ void T::addToPosition(int value, int position)
     }
 }
 
-template <typename T>
 
-int T::deleteFromPosition(int position)
+
+int Node::deleteFromPosition(int position)
 {
     if (head == nullptr)
     {
@@ -43,7 +41,7 @@ int T::deleteFromPosition(int position)
     }
     else
     {
-        T* a = head;
+        Node* a = head;
         for (int i = position; i > 1; i--) a = a->next;
         if (a == head) head = a->next;
         a->prev->next = a->next;
@@ -52,14 +50,13 @@ int T::deleteFromPosition(int position)
     }
 }
 
-template <typename T>
 
-void T::printList()
+void Node::printList()
 {
     if (head == nullptr) cout << "\nList is empty\n\n";
     else
     {
-        T* current = head;
+        Node* current = head;
         cout << "\nList: ";
         do
         {
