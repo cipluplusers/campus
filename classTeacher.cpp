@@ -8,7 +8,7 @@ string Teacher::toString()
 	string strName = name;
 	string strSurname = surname;
 	string strSecondName = secondName;
-	string strDateOfBirht = to_string(dateOfBirht);
+	string strDateOfBirht = dateOfBirht.getString();
 	string strId = to_string(id);
 	string strDepartmentId = to_string(departmentId);
 	string strSubjectId = to_string(subjectId);

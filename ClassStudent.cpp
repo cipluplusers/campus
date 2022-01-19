@@ -8,8 +8,8 @@ string Student::toString()
 	string strName = name;
 	string strSurname = surname;
 	string strSecondName = secondName;
-	string strDateOfBirht = to_string(dateOfBirht);
-	string strCourseStartDate = to_string(courseStartDate);
+	string strDateOfBirht = dateOfBirth.getString();
+	string strCourseStartDate = courseStartDate.getString();
 	string strId = to_string(id);
 	string strDiaryId = to_string(diaryId);
 	string strDepartmentId = to_string(departmentId);
