@@ -18,3 +18,10 @@ string Student::toString()
 		strCourseStartDate + " " + strId + " " + strDepartmentId + " " + strDiaryId + " " + strLearningProgrammingId;
 	return allData;
 }
+
+std::ostream& operator<< (std::ostream& out, const Student& student)
+{
+	out << student.toString() << endl;
+
+	return out;
+}

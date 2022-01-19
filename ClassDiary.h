@@ -10,6 +10,8 @@ public:
     int marks;
 
     string toString();
+
+	friend std::ostream& operator<< (std::ostream& out, const Diary& diary);
 };
 
 #endif /* CLASSDIARY_H */

@@ -11,6 +11,9 @@ public:
     string Subject;
 
     string toString();
+
+	friend std::ostream& operator<< (std::ostream& out, const LearningProgram& lp);
+
 };
 
 #endif

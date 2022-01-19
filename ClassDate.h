@@ -28,6 +28,7 @@ public:
 
     string getString();
   
+	friend std::ostream& operator<< (std::ostream& out, const Date& date);
 
 };
 

@@ -16,3 +16,10 @@ string Teacher::toString()
 		strId + " " + strDepartmentId + " " + strSubjectId;
 	return allData;
 }
+
+std::ostream& operator<< (std::ostream& out, const Teacher& teacher)
+{
+	out << teacher.toString() << endl;
+
+	return out;
+}

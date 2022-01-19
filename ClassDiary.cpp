@@ -10,3 +10,10 @@ string Diary::toString()
 	string allData = strId + " " + strStudentId + " " + strMarks;
 	return allData;
 }
+
+std::ostream& operator<< (std::ostream& out, const Diary& diary)
+{
+	out << diary.toString() << endl;
+
+	return out;
+}

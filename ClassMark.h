@@ -1,7 +1,6 @@
 #ifndef CLASSMARK_H
 #define CLASSMARK_H
 
-
 using namespace std;
 
 
@@ -14,6 +13,9 @@ public:
 	int value;
 
 	string toString();
+
+	friend std::ostream& operator<< (std::ostream& out, const Mark& mark);
+
 };
 
 

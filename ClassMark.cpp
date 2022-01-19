@@ -11,3 +11,11 @@ string Mark::toString()
 	string allData = strId + " " + strSubjectId + " " + strTeacherId + " " + strValue;
 	return allData;
 }
+
+
+std::ostream& operator<< (std::ostream& out, const Mark& mark)
+{
+	out << mark.toString() << endl;
+
+	return out;
+}

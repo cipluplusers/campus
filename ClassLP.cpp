@@ -9,3 +9,10 @@ string LearningProgram::toString()
 	string allData = strSubject + " " + strId;
 	return allData;
 }
+
+std::ostream& operator<< (std::ostream& out, const LearningProgram& lp)
+{
+	out << lp.toString() << endl;
+
+	return out;
+}
