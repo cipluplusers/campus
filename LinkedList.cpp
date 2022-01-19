@@ -2,11 +2,7 @@
 
 template <typename T>
 
-<<<<<<< HEAD
 void Node::addToPosition(T value, T position)
-=======
-void Node::addToPosition(T value, int position)
->>>>>>> 72daaa1ee166d539f19067566ed7d188b0e2820c
 {
     Node* node = new Node;
     node->data = value;
@@ -30,14 +26,10 @@ void Node::addToPosition(T value, int position)
     }
 }
 
-<<<<<<< HEAD
 template <typename T>
 
 int Node::deleteFromPosition(T position)
-=======
 
-int Node::deleteFromPosition(int position)
->>>>>>> 72daaa1ee166d539f19067566ed7d188b0e2820c
 {
     if (head == nullptr)
     {
