@@ -3,14 +3,27 @@
 
 using namespace std;
 
+<<<<<<< HEAD
 
 struct Node
 {
 	int data;
+=======
+template <typename T>
+
+struct Node
+{
+	T data;
+>>>>>>> 72daaa1ee166d539f19067566ed7d188b0e2820c
 	Node* next;
 	Node* prev;
 };
 
+<<<<<<< HEAD
+=======
+template <class T>
+
+>>>>>>> 72daaa1ee166d539f19067566ed7d188b0e2820c
 class LinkedList
 {
 public:
@@ -24,6 +37,7 @@ public:
 		head = nullptr;
 	}
 
+<<<<<<< HEAD
 	void addToPosition(int value, int position)
 	{
 		Node* node = new Node;
@@ -95,3 +109,17 @@ public:
 
 
 #endif
+=======
+    void addToPosition(T value, int position);
+
+
+    int deleteFromPosition(int position);
+    
+
+    void printList();
+    
+};
+
+
+#endif
+>>>>>>> 72daaa1ee166d539f19067566ed7d188b0e2820c
