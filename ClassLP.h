@@ -9,6 +9,8 @@ public:
     
     unsigned long Id;
     string Subject;
+
+    string toString();
 };
 
 #endif

@@ -8,6 +8,8 @@ public:
     unsigned long id;
     unsigned long studentId;
     int marks;
+
+    string toString();
 };
 
 #endif /* CLASSDIARY_H */
