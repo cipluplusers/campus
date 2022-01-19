@@ -4,9 +4,8 @@ using namespace std;
 class Subject
 {
 public:
-	string SubjectCaption;
-	unsigned long SubjectId;
-	unsigned long  SubjectCountOfCredits;
+	string subjectCaption;
+	unsigned long subjectId;
+	unsigned long  subjectCountOfCredits;
 };
-
 #endif
