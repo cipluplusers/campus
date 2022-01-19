@@ -12,6 +12,8 @@ struct Node
 	Node* prev;
 };
 
+template <class T>
+
 class LinkedList
 {
 public:
@@ -25,10 +27,10 @@ public:
 		head = nullptr;
 	}
 
-    void addToPosition(int value, int position);
+    void addToPosition(T value, T position);
 
 
-    int deleteFromPosition(int position);
+    int deleteFromPosition(T position);
     
 
     void printList();
