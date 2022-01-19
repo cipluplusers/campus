@@ -3,13 +3,16 @@
 
 using namespace std;
 
+template <typename T>
 
 struct Node
 {
-	int data;
+	T data;
 	Node* next;
 	Node* prev;
 };
+
+template <class T>
 
 class LinkedList
 {
@@ -24,10 +27,10 @@ public:
 		head = nullptr;
 	}
 
-    void addToPosition(int value, int position);
+    void addToPosition(T value, T position);
 
 
-    int deleteFromPosition(int position);
+    int deleteFromPosition(T position);
     
 
     void printList();
