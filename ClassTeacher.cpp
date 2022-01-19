@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-#include "classTeacher.h"
+#include "ClassTeacher.h"
 #include "ClassDate.h"
 
 string Teacher::toString()
