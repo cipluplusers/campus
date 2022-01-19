@@ -12,6 +12,8 @@ public:
 	unsigned long subjectId;
 	unsigned long teacherId;
 	int value;
+
+	string toString();
 };
 
 

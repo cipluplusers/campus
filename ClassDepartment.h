@@ -9,6 +9,8 @@ public:
 
 	string caption;
 	unsigned long id;
+
+	string toString();
 };
 
 #endif // CLASSDEPARTMENT_Hdfghjk

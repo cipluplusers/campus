@@ -16,6 +16,8 @@ public:
     unsigned long departmentId;
     unsigned long diaryId;
     unsigned long learningProgrammingId;
+
+    string toString();
 };
 
 #endif /* CLASSSTUDENT_H */
