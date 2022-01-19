@@ -7,8 +7,8 @@ class LearningProgram
 {
 public:
     
-    unsigned long Id;
-    string Subject;
+    unsigned long id;
+    LinkedList<string> Subject;
 
     string toString();
 };
