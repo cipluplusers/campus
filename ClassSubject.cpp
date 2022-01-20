@@ -2,7 +2,7 @@
 #include <iostream>
 #include <string>
 
-string Subject::toString()
+/*string Subject::toString()
 {
 	string strSubjectCaption = subjectCaption;
 	string strSubjectId = subjectId;
@@ -16,4 +16,4 @@ std::ostream& operator<< (std::ostream& out, Subject& subject)
 	out << subject.toString() << endl;
 
 	return out;
-}
+}*/
