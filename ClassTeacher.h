@@ -1,9 +1,6 @@
 #ifndef CLASSTEACHER_H
 #define CLASSTEACHER_H
-<<<<<<< HEAD
 #include "ClassDate.h"
-=======
->>>>>>> 473694388e1478050c29b899966e71c40fe365c8
 
 using namespace std;
 
@@ -20,7 +17,7 @@ public:
 
     string toString();
 
-	friend std::ostream& operator<< (std::ostream& out, const Teacher& teacher);
+	friend std::ostream& operator<< (std::ostream& out, Teacher& teacher);
 
 };
 
