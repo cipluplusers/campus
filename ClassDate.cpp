@@ -18,6 +18,7 @@ void Date::PrintDate()
 }
 
 
+<<<<<<< HEAD
 bool operator==(Date &d1, Date &d2)
 {
     return ( d1.getDay() == d2.getDay() &&
@@ -55,3 +56,7 @@ bool operator>(Date &d1, Date &d2)
     
     return !(d1 < d2);
 }
+=======
+
+
+>>>>>>> main
