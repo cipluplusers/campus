@@ -1,5 +1,7 @@
 #ifndef CLASSSTUDENT_H
 #define CLASSSTUDENT_H
+#include <string>
+#include "ClassDate.h"
 
 using namespace std;
 

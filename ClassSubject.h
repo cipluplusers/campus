@@ -1,5 +1,6 @@
 #ifndef SUBJECTS_H
 #define SUBJECTS_H
+#include <string>
 
 using namespace std;
 
@@ -12,6 +13,6 @@ public:
 
 	string toString();
 
-	friend std::ostream& operator<< (std::ostream& out, const Subject& subject);
+	friend std::ostream& operator<< (std::ostream& out, Subject& subject);
 };
 #endif

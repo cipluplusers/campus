@@ -19,7 +19,7 @@ string Student::toString()
 	return allData;
 }
 
-std::ostream& operator<< (std::ostream& out, const Student& student)
+std::ostream& operator<< (std::ostream& out, Student& student)
 {
 	out << student.toString() << endl;
 

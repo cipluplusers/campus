@@ -1,6 +1,7 @@
 #ifndef CLASSLEARNINGPROGRAM_H
 #define CLASSLEARNINGPROGRAM_H
-
+#include <string>
+#include "LinkedList.h"
 
 using namespace std;
 
@@ -13,7 +14,7 @@ public:
 
     string toString();
 
-	friend std::ostream& operator<< (std::ostream& out, const LearningProgram& lp);
+	friend std::ostream& operator<< (std::ostream& out, LearningProgram& lp);
 
 };
 

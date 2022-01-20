@@ -1,5 +1,6 @@
 #ifndef CLASSTEACHER_H
 #define CLASSTEACHER_H
+#include "ClassDate.h"
 
 using namespace std;
 

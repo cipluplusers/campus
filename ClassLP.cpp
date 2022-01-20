@@ -12,7 +12,7 @@ string LearningProgram::toString()
 	return allData;
 }
 
-std::ostream& operator<< (std::ostream& out, const LearningProgram& lp)
+std::ostream& operator<< (std::ostream& out, LearningProgram& lp)
 {
 	out << lp.toString() << endl;
 

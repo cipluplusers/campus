@@ -9,7 +9,7 @@ string Department::toString()
 	return allData;
 }
 
-std::ostream& operator<< (std::ostream& out, const Department& department)
+std::ostream& operator<< (std::ostream& out, Department& department)
 {
 	out << department.toString() << endl;
 

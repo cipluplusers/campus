@@ -1,5 +1,7 @@
 #ifndef CLASSDIARY_H
 #define CLASSDIARY_H
+#include <string>
+#include "LinkedList.h"
 
 using namespace std;
 
@@ -11,7 +13,7 @@ public:
 
     string toString();
 
-	friend std::ostream& operator<< (std::ostream& out, const Diary& diary);
+	friend ostream& operator<< (ostream& out, Diary& diary);
 };
 
 #endif /* CLASSDIARY_H */

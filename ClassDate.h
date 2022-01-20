@@ -1,5 +1,6 @@
 #ifndef CLASSDATE_H
 #define CLASSDATE_H
+#include <string>
 
 using namespace std;
 

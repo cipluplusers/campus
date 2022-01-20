@@ -1,4 +1,4 @@
-﻿#include "ClassMark.h"
+#include "ClassMark.h"
 #include <iostream>
 #include <string>
 
@@ -14,7 +14,7 @@ string Mark::toString()
 }
 
 
-std::ostream& operator<< (std::ostream& out, const Mark& mark)
+std::ostream& operator<< (std::ostream& out, Mark& mark)
 {
 	out << mark.toString() << endl;
 
