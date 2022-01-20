@@ -17,7 +17,7 @@ public:
 
     string toString();
 
-	friend ostream& operator<< (ostream& out, Teacher& teacher);
+	friend std::ostream& operator<< (std::ostream& out, const Teacher& teacher);
 
 };
 

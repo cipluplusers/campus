@@ -14,7 +14,6 @@ string Teacher::toString()
 	string strSubjectId = to_string(subjectId);
 	string allData = strName + " " + strSurname + " " + strSecondName + " " + strDateOfBirht + " " +
 		strId + " " + strDepartmentId + " " + strSubjectId;
-    
 	return allData;
 }
 

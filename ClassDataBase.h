@@ -1,5 +1,6 @@
 #ifndef CLASSDATABASE
 #define CLASSDATABASE
+
 #include "ClassDataBase.h"
 #include "ClassDepartment.h"
 #include "ClassDiary.h"
@@ -7,8 +8,9 @@
 #include "ClassMark.h"
 #include "ClassStudent.h"
 #include "ClassSubject.h"
-#include "сlassTeacher.h"
+#include "ClassTeacher.h"
 #include "LinkedList.h"
+
 
 using namespace std;
 
@@ -25,7 +27,7 @@ private:
 
 public:
 
-    Student getStudents()
+	Student getStudents() 
 	{ 
 		return students; 
 	}
@@ -33,8 +35,7 @@ public:
 	{ 
 		students = valueStudents;
 	}
-    
-    
+
 	Teacher getTeachers()
 	{
 		return teachers; 
@@ -43,8 +44,7 @@ public:
 	{
 		teachers = valueTeachers;
 	}
-    
-    
+  
     LinkedList<Mark> getMarks()
 	{
 		return marks;
@@ -53,8 +53,7 @@ public:
 	{
 		marks = valueMarks;
 	}
-    
-    
+
 	LearningProgram getLearningPrograms()
 	{
 		return learningPrograms;
@@ -63,8 +62,7 @@ public:
 	{
 		learningPrograms = valueLearningPrograms;
 	}
-    
-    
+
 	Department getDepartments()
 	{
 		return departments;
@@ -73,8 +71,7 @@ public:
 	{
 		departments = valueDepartments;
 	}
-    
-    
+  
 	Diary getDiaries()
 	{
 		return diaries;
@@ -83,8 +80,7 @@ public:
 	{
 		diaries = valueDiaries;
 	}
-    
-    
+
 	Subject getSubjects()
 	{
 		return subjects;

@@ -8,6 +8,7 @@ template <typename T>
 void LinkedList<T>::addToPosition(T value, T position)
 {
     Node<T>* node = new Node<T>;
+
     node->data = value;
     if (head == nullptr)
     {
@@ -18,6 +19,7 @@ void LinkedList<T>::addToPosition(T value, T position)
     else
     {
         Node<T>* p = head;
+
         for (int i = position; i > 1; i--)
         {
             p = p->next;
@@ -31,7 +33,6 @@ void LinkedList<T>::addToPosition(T value, T position)
 
 template <typename T>
 int LinkedList<T>::deleteFromPosition(T position)
-
 {
     if (head == nullptr)
     {
@@ -55,7 +56,6 @@ int LinkedList<T>::deleteFromPosition(T position)
     }
 }
 
-
 template <typename T>
 void LinkedList<T>::printList()
 {
@@ -63,6 +63,7 @@ void LinkedList<T>::printList()
     else
     {
         Node<T>* current = head;
+
         cout << "\nList: ";
         do
         {

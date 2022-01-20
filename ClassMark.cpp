@@ -1,4 +1,5 @@
 #include "ClassMark.h"
+
 #include <iostream>
 #include <string>
 
@@ -12,6 +13,7 @@ string Mark::toString()
 	string allData = strId + " " + strSubjectId + " " + strTeacherId + " " + strStudentId + " " + strValue;
 	return allData;
 }
+
 
 
 std::ostream& operator<< (std::ostream& out, Mark& mark)
