@@ -17,11 +17,8 @@ string Teacher::toString()
 	return allData;
 }
 
-<<<<<<< HEAD
+
 std::ostream& operator<< (std::ostream& out, Teacher& teacher)
-=======
-std::ostream& operator<< (std::ostream& out, const Teacher& teacher)
->>>>>>> 473694388e1478050c29b899966e71c40fe365c8
 {
 	out << teacher.toString() << endl;
 

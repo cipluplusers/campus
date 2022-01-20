@@ -8,11 +8,7 @@
 #include "ClassMark.h"
 #include "ClassStudent.h"
 #include "ClassSubject.h"
-<<<<<<< HEAD
 #include "ClassTeacher.h"
-=======
-#include "сlassTeacher.h"
->>>>>>> df188ce150d40f1d5f49bfa5958e80b27dc803fb
 #include "LinkedList.h"
 
 
