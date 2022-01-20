@@ -5,8 +5,10 @@
 
 using namespace std;
 
-class Diary {
+class Diary
+{
 public:
+    
     unsigned long id;
     unsigned long studentId;
     LinkedList<int> Marks;

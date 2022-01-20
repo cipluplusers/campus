@@ -5,5 +5,5 @@
 #include "ClassMark.h"
 #include "ClassStudent.h"
 #include "ClassSubject.h"
-#include "ClassTeacher.h"
+#include "сlassTeacher.h"
 #include "LinkedList.h"
