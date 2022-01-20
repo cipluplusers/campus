@@ -7,8 +7,13 @@ class Department
 {
 public:
 
-	string caption;
+	string title;
 	unsigned long id;
+
+	string toString();
+
+	friend std::ostream& operator<< (std::ostream& out, const Department& department);
+
 };
 
 #endif // CLASSDEPARTMENT_Hdfghjk

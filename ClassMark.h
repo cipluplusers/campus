@@ -1,7 +1,6 @@
 #ifndef CLASSMARK_H
 #define CLASSMARK_H
 
-
 using namespace std;
 
 
@@ -11,7 +10,13 @@ public:
 	unsigned long id;
 	unsigned long subjectId;
 	unsigned long teacherId;
+	unsigned long studentId;
 	int value;
+
+	string toString();
+
+	friend std::ostream& operator<< (std::ostream& out, const Mark& mark);
+
 };
 
 

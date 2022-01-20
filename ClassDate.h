@@ -24,8 +24,12 @@ public:
     int getYear() { return year; }
     void setYear(int valueYear) { year = valueYear; }
     
-    void PrintDate();
+    void printDate();
+
+    string getString();
   
+	friend std::ostream& operator<< (std::ostream& out, const Date& date);
+
 };
 
 bool operator==(Date &d1, Date &d2);
