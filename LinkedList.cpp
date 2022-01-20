@@ -35,7 +35,10 @@ template <typename T>
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 473694388e1478050c29b899966e71c40fe365c8
+=======
+>>>>>>> df188ce150d40f1d5f49bfa5958e80b27dc803fb
 int LinkedList<T>::deleteFromPosition(T position)
 {
     if (head == nullptr)
@@ -61,9 +64,12 @@ int LinkedList<T>::deleteFromPosition(T position)
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 template <typename T>
 =======
 >>>>>>> 473694388e1478050c29b899966e71c40fe365c8
+=======
+>>>>>>> df188ce150d40f1d5f49bfa5958e80b27dc803fb
 void LinkedList<T>::printList()
 
 {
