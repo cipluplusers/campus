@@ -13,6 +13,6 @@ public:
 
 	string toString();
 
-	friend std::ostream& operator<< (std::ostream& out, Subject& subject);
+	friend ostream& operator<< (ostream& out, Subject& subject);
 };
 #endif
