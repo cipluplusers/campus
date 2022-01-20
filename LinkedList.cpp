@@ -2,6 +2,7 @@
 #include <iostream>
 #include <string>
 
+
 using namespace std;
 
 template <typename T>
@@ -75,3 +76,47 @@ void LinkedList<T>::printList()
         cout << "\n\n";
     }
 }
+
+template <typename T>
+
+void LinkedList<T>::pushBack(T value)
+{
+    Node<T>* node = new Node;
+    Node<T>* last = head;
+    node->data = value;
+
+    node->next = nullptr;
+
+    if (head = nullptr)
+    {
+        node->prev = nullptr;
+        head = node;
+        return;
+    }
+    while (last->next != nullptr)
+    {
+        last = last->next;
+    }
+
+    last->next = node;
+    node->prev = last;
+}
+
+template <typename T>
+
+void LinkedList<T>::pushFront(T value)
+{
+    Node<T>* node = new Node<T>;
+    node->data = value;
+
+    node->next = head;
+    node->prev = nullptr;
+
+    if (head != nullptr)
+    {
+        head->prev = node;
+    }
+
+    head = node;
+}
+

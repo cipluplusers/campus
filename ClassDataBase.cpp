@@ -7,3 +7,5 @@
 #include "ClassSubject.h"
 #include "ClassTeacher.h"
 #include "LinkedList.h"
+#include <iostream>
+#include <string>
