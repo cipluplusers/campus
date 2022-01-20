@@ -1,6 +1,7 @@
 #ifndef LINKEDLIST_H
 #define LINKEDLIST_H
 
+
 template <typename T>
 class Node
 {
@@ -30,8 +31,12 @@ public:
 
     int deleteFromPosition(T position);
     
-
     void printList();
+
+	void pushBack(T value);
+
+	void pushFront(T value);
+
     
 };
 

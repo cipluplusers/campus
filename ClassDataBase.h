@@ -27,20 +27,20 @@ private:
 
 public:
 
-	Student getStudents() 
+	LinkedList<Student> getStudents()
 	{ 
 		return students; 
 	}
-	void setStudent(Student valueStudents)
+	void setStudent(LinkedList<Student> valueStudents)
 	{ 
 		students = valueStudents;
 	}
 
-	Teacher getTeachers()
+	LinkedList<Teacher> getTeachers()
 	{
 		return teachers; 
 	}
-	void setTeacher(Teacher valueTeachers)
+	void setTeacher(LinkedList<Teacher> valueTeachers)
 	{
 		teachers = valueTeachers;
 	}
@@ -54,38 +54,38 @@ public:
 		marks = valueMarks;
 	}
 
-	LearningProgram getLearningPrograms()
+	LinkedList<LearningProgram> getLearningPrograms()
 	{
 		return learningPrograms;
 	}
-	void setLearningProgram(LearningProgram valueLearningPrograms)
+	void setLearningProgram(LinkedList<LearningProgram> valueLearningPrograms)
 	{
 		learningPrograms = valueLearningPrograms;
 	}
 
-	Department getDepartments()
+	LinkedList<Department> getDepartments()
 	{
 		return departments;
 	}
-	void setDepartment(Department valueDepartments)
+	void setDepartment(LinkedList<Department> valueDepartments)
 	{
 		departments = valueDepartments;
 	}
   
-	Diary getDiaries()
+	LinkedList<Diary> getDiaries()
 	{
 		return diaries;
 	}
-	void setDiary(Diary valueDiaries)
+	void setDiary(LinkedList<Diary> valueDiaries)
 	{
 		diaries = valueDiaries;
 	}
 
-	Subject getSubjects()
+	LinkedList<Subject> getSubjects()
 	{
 		return subjects;
 	}
-	void setSubject(Subject valueSubjects)
+	void setSubject(LinkedList<Subject> valueSubjects)
 	{
 		subjects = valueSubjects;
 	}
