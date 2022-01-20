@@ -1,4 +1,5 @@
 #include "LinkedList.h"
+
 #include "ClassDiary.h"
 #include <iostream>
 #include <string>

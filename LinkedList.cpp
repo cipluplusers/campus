@@ -32,6 +32,10 @@ void LinkedList<T>::addToPosition(T value, T position)
 }
 
 template <typename T>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 473694388e1478050c29b899966e71c40fe365c8
 int LinkedList<T>::deleteFromPosition(T position)
 {
     if (head == nullptr)
@@ -56,8 +60,12 @@ int LinkedList<T>::deleteFromPosition(T position)
     }
 }
 
+<<<<<<< HEAD
 template <typename T>
+=======
+>>>>>>> 473694388e1478050c29b899966e71c40fe365c8
 void LinkedList<T>::printList()
+
 {
     if (head == nullptr) cout << "\nList is empty\n\n";
     else
