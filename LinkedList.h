@@ -11,11 +11,13 @@ public:
 };
 
 template <class T>
+
 class LinkedList
 {
 public:
 
 	Node<T>* head;
+
 
 public:
 

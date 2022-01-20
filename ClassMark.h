@@ -2,6 +2,7 @@
 #define CLASSMARK_H
 #include <string>
 
+
 using namespace std;
 
 
@@ -15,9 +16,8 @@ public:
 	int value;
 
 	string toString();
-
+  
 	friend ostream& operator<< (ostream& out, const Mark& mark);
-
 };
 
 

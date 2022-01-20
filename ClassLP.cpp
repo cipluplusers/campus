@@ -13,6 +13,7 @@ string LearningProgram::toString()
 }
 
 std::ostream& operator<< (std::ostream& out, LearningProgram& lp)
+
 {
 	out << lp.toString() << endl;
 

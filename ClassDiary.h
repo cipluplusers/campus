@@ -16,6 +16,7 @@ public:
     string toString();
 
 	friend ostream& operator<< (ostream& out, Diary& diary);
+
 };
 
 #endif /* CLASSDIARY_H */
