@@ -11,7 +11,7 @@ public:
     
     unsigned long id;
     unsigned long studentId;
-    LinkedList<int> Marks;
+    LinkedList<Marks> Marks;
 
     string toString();
 
