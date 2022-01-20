@@ -1,12 +1,10 @@
 #ifndef LINKEDLIST_H
 #define LINKEDLIST_H
 
-using namespace std;
-
 template <typename T>
-
-struct Node
+class Node
 {
+public:
 	T data;
 	Node* next;
 	Node* prev;
@@ -18,7 +16,8 @@ class LinkedList
 {
 public:
 
-	Node* head;
+	Node<T>* head;
+
 
 public:
 

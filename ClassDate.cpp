@@ -66,9 +66,10 @@ bool operator>(Date &d1, Date &d2)
     return !(d1 < d2);
 }
 
-std::ostream& operator<< (std::ostream& out, const Date& date)
+
+ostream& operator<< (ostream& out, Date& date)
 {
 	out << date.toString() << endl;
-
 	return out;
 }
+

@@ -1,17 +1,22 @@
 #ifndef CLASSDIARY_H
 #define CLASSDIARY_H
+#include <string>
+#include "LinkedList.h"
 
 using namespace std;
 
-class Diary {
+class Diary
+{
 public:
+    
     unsigned long id;
     unsigned long studentId;
-    LinkedList<int> Marks;
+    LinkedList<Marks> Marks;
 
     string toString();
 
-	friend std::ostream& operator<< (std::ostream& out, const Diary& diary);
+	friend ostream& operator<< (ostream& out, Diary& diary);
+
 };
 
 #endif /* CLASSDIARY_H */

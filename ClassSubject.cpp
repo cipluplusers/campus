@@ -1,4 +1,4 @@
-﻿#include "ClassSubject.h"
+#include "ClassSubject.h"
 #include <iostream>
 #include <string>
 
@@ -11,7 +11,7 @@ string Subject::toString()
 	return allData;
 }
 
-std::ostream& operator<< (std::ostream& out, const Subject& subject)
+std::ostream& operator<< (std::ostream& out, Subject& subject)
 {
 	out << subject.toString() << endl;
 

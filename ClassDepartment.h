@@ -1,5 +1,6 @@
 #ifndef CLASSDEPARTMENT_H
 #define CLASSDEPARTMENT_H
+#include <string>
 
 using namespace std;
 
