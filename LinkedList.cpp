@@ -5,6 +5,7 @@
 
 using namespace std;
 
+
 template <typename T>
 void LinkedList<T>::addToPosition(T value, T position)
 {
@@ -32,6 +33,7 @@ void LinkedList<T>::addToPosition(T value, T position)
     }
 }
 
+
 template <typename T>
 int LinkedList<T>::deleteFromPosition(T position)
 {
@@ -49,7 +51,9 @@ int LinkedList<T>::deleteFromPosition(T position)
     else
     {
         Node<T>* a = head;
+        
         for (int i = position; i > 1; i--) a = a->next;
+        
         if (a == head) head = a->next;
         a->prev->next = a->next;
         a->next->prev = a->prev;
@@ -60,7 +64,6 @@ int LinkedList<T>::deleteFromPosition(T position)
 
 template <typename T>
 void LinkedList<T>::printList()
-
 {
     if (head == nullptr) cout << "\nList is empty\n\n";
     else
@@ -77,22 +80,23 @@ void LinkedList<T>::printList()
     }
 }
 
-template <typename T>
 
+template <typename T>
 void LinkedList<T>::pushBack(T value)
 {
-    Node<T>* node = new Node;
+    Node<T>* node = new Node<T>;
     Node<T>* last = head;
     node->data = value;
 
     node->next = nullptr;
 
-    if (head = nullptr)
+    if (head == nullptr)
     {
         node->prev = nullptr;
         head = node;
         return;
     }
+    
     while (last->next != nullptr)
     {
         last = last->next;
@@ -102,8 +106,8 @@ void LinkedList<T>::pushBack(T value)
     node->prev = last;
 }
 
-template <typename T>
 
+template <typename T>
 void LinkedList<T>::pushFront(T value)
 {
     Node<T>* node = new Node<T>;

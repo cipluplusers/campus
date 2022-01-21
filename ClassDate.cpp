@@ -2,6 +2,7 @@
 #include <string>
 #include "ClassDate.h"
 
+
 using namespace std;
 
 
@@ -18,6 +19,7 @@ void Date::printDate()
     cout << "Date: " << day << "/" << month << "/"  << year << endl;
 }
 
+
 string Date::getString()
 {
     string sday = to_string(day);
@@ -25,6 +27,14 @@ string Date::getString()
     string syear = to_string(year);
     string str = sday + "." + smonth + "." + syear;
         return str;
+}
+
+
+string Date::serialize()
+{
+    return "|Day|" + to_string( getDay() ) +
+           "|Month|" + to_string( getMonth() ) +
+           "|Year|" + to_string( getYear() ) + "|";
 }
 
 
@@ -69,7 +79,7 @@ bool operator>(Date &d1, Date &d2)
 
 ostream& operator<< (ostream& out, Date& date)
 {
-	out << date.toString() << endl;
+	out << date.getString() << endl;
 	return out;
 }
 

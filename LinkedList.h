@@ -6,19 +6,19 @@ template <typename T>
 class Node
 {
 public:
+    
 	T data;
 	Node* next;
 	Node* prev;
 };
 
-template <class T>
 
+template <class T>
 class LinkedList
 {
 public:
 
 	Node<T>* head;
-
 
 public:
 
@@ -36,8 +36,6 @@ public:
 	void pushBack(T value);
 
 	void pushFront(T value);
-
-    
 };
 
 
