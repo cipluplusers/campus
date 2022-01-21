@@ -34,7 +34,6 @@ public:
     string serialize();
   
 	friend std::ostream& operator<< (std::ostream& out, Date& date);
-
 };
 
 
