@@ -120,3 +120,23 @@ void LinkedList<T>::pushFront(T value)
     head = node;
 }
 
+template <typename T>
+int LinkedList::getPositionOfElement(T element)
+{
+    Node<T>* node = new Node<T>;
+    node->data = element;
+    
+    int position = 0;
+    
+    if (head == nullptr)
+    {
+        return 0;
+    }
+    
+    while (head->data == node->data)
+    {
+        head = head->next;
+        position ++;
+    }
+    return position;
+}
