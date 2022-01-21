@@ -1,10 +1,15 @@
 #include "LinkedList.h"
+#include <iostream>
+#include <string>
+
+
+using namespace std;
 
 template <typename T>
-
-void Node::addToPosition(T value, int position)
+void LinkedList<T>::addToPosition(T value, T position)
 {
-    Node* node = new Node;
+    Node<T>* node = new Node<T>;
+
     node->data = value;
     if (head == nullptr)
     {
@@ -14,7 +19,8 @@ void Node::addToPosition(T value, int position)
     }
     else
     {
-        Node* p = head;
+        Node<T>* p = head;
+
         for (int i = position; i > 1; i--)
         {
             p = p->next;
@@ -26,8 +32,8 @@ void Node::addToPosition(T value, int position)
     }
 }
 
-
-int Node::deleteFromPosition(int position)
+template <typename T>
+int LinkedList<T>::deleteFromPosition(T position)
 {
     if (head == nullptr)
     {
@@ -42,7 +48,7 @@ int Node::deleteFromPosition(int position)
     }
     else
     {
-        Node* a = head;
+        Node<T>* a = head;
         for (int i = position; i > 1; i--) a = a->next;
         if (a == head) head = a->next;
         a->prev->next = a->next;
@@ -52,12 +58,15 @@ int Node::deleteFromPosition(int position)
 }
 
 
-void Node::printList()
+template <typename T>
+void LinkedList<T>::printList()
+
 {
     if (head == nullptr) cout << "\nList is empty\n\n";
     else
     {
-        Node* current = head;
+        Node<T>* current = head;
+
         cout << "\nList: ";
         do
         {
@@ -67,3 +76,47 @@ void Node::printList()
         cout << "\n\n";
     }
 }
+
+template <typename T>
+
+void LinkedList<T>::pushBack(T value)
+{
+    Node<T>* node = new Node;
+    Node<T>* last = head;
+    node->data = value;
+
+    node->next = nullptr;
+
+    if (head = nullptr)
+    {
+        node->prev = nullptr;
+        head = node;
+        return;
+    }
+    while (last->next != nullptr)
+    {
+        last = last->next;
+    }
+
+    last->next = node;
+    node->prev = last;
+}
+
+template <typename T>
+
+void LinkedList<T>::pushFront(T value)
+{
+    Node<T>* node = new Node<T>;
+    node->data = value;
+
+    node->next = head;
+    node->prev = nullptr;
+
+    if (head != nullptr)
+    {
+        head->prev = node;
+    }
+
+    head = node;
+}
+

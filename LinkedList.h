@@ -1,12 +1,11 @@
 #ifndef LINKEDLIST_H
 #define LINKEDLIST_H
 
-using namespace std;
 
 template <typename T>
-
-struct Node
+class Node
 {
+public:
 	T data;
 	Node* next;
 	Node* prev;
@@ -18,7 +17,8 @@ class LinkedList
 {
 public:
 
-	Node* head;
+	Node<T>* head;
+
 
 public:
 
@@ -27,13 +27,16 @@ public:
 		head = nullptr;
 	}
 
-    void addToPosition(T value, int position);
+    void addToPosition(T value, T position);
 
-
-    int deleteFromPosition(int position);
+    int deleteFromPosition(T position);
     
-
     void printList();
+
+	void pushBack(T value);
+
+	void pushFront(T value);
+
     
 };
 

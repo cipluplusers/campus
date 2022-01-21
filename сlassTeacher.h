@@ -1,5 +1,6 @@
 #ifndef CLASSTEACHER_H
 #define CLASSTEACHER_H
+#include "ClassDate.h"
 
 using namespace std;
 
@@ -15,6 +16,9 @@ public:
     unsigned long subjectId;
 
     string toString();
+
+	friend ostream& operator<< (ostream& out, Teacher& teacher);
+
 };
 
 #endif // CLASSTEACHER_H

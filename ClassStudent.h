@@ -1,5 +1,7 @@
 #ifndef CLASSSTUDENT_H
 #define CLASSSTUDENT_H
+#include <string>
+#include "ClassDate.h"
 
 using namespace std;
 
@@ -15,9 +17,12 @@ public:
     unsigned long id;
     unsigned long departmentId;
     unsigned long diaryId;
-    unsigned long learningProgrammingId;
+    unsigned long learningProgrammId;
 
     string toString();
+
+	friend std::ostream& operator<< (std::ostream& out, const Student& student);
+
 };
 
 #endif /* CLASSSTUDENT_H */

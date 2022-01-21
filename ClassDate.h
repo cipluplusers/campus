@@ -1,5 +1,6 @@
 #ifndef CLASSDATE_H
 #define CLASSDATE_H
+#include <string>
 
 using namespace std;
 
@@ -28,6 +29,7 @@ public:
 
     string getString();
   
+	friend std::ostream& operator<< (std::ostream& out, const Date& date);
 
 };
 
