@@ -1,14 +1,21 @@
 #ifndef CLASSLEARNINGPROGRAM_H
 #define CLASSLEARNINGPROGRAM_H
+#include <string>
+#include "LinkedList.h"
+
 
 using namespace std;
 
 class LearningProgram
 {
 public:
-    
-    unsigned long Id;
-    string Subject;
+    string title;
+    unsigned long id;
+    LinkedList<string> subjects;
+
+    //string toString();
+
+	//friend std::ostream& operator<< (std::ostream& out, LearningProgram& lp);
 };
 
 #endif
