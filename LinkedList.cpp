@@ -121,7 +121,7 @@ void LinkedList<T>::pushFront(T value)
 }
 
 template <typename T>
-int LinkedList::getPositionOfElement(T element)
+int LinkedList<T>::getPositionOfElement(T element)
 {
     Node<T>* node = new Node<T>;
     node->data = element;
