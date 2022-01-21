@@ -11,14 +11,13 @@ public:
 	Node* prev;
 };
 
-template <class T>
 
+template <class T>
 class LinkedList
 {
 public:
 
 	Node<T>* head;
-
 
 public:
 
@@ -36,7 +35,6 @@ public:
 	void pushBack(T value);
 
 	void pushFront(T value);
-
     
 };
 

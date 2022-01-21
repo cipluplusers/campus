@@ -7,6 +7,7 @@ using namespace std;
 class Teacher
 {
 public:
+    
     string name;
     string surname;
     string secondName;
