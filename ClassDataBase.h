@@ -36,6 +36,7 @@ public:
 		students = valueStudents;
 	}
 
+    
 	LinkedList<Teacher> getTeachers()
 	{
 		return teachers; 
@@ -45,6 +46,7 @@ public:
 		teachers = valueTeachers;
 	}
   
+    
     LinkedList<Mark> getMarks()
 	{
 		return marks;
@@ -54,6 +56,7 @@ public:
 		marks = valueMarks;
 	}
 
+    
 	LinkedList<LearningProgram> getLearningPrograms()
 	{
 		return learningPrograms;
@@ -63,6 +66,7 @@ public:
 		learningPrograms = valueLearningPrograms;
 	}
 
+    
 	LinkedList<Department> getDepartments()
 	{
 		return departments;
@@ -72,6 +76,7 @@ public:
 		departments = valueDepartments;
 	}
   
+    
 	LinkedList<Diary> getDiaries()
 	{
 		return diaries;
@@ -81,6 +86,7 @@ public:
 		diaries = valueDiaries;
 	}
 
+    
 	LinkedList<Subject> getSubjects()
 	{
 		return subjects;

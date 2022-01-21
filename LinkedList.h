@@ -6,6 +6,7 @@ template <typename T>
 class Node
 {
 public:
+    
 	T data;
 	Node* next;
 	Node* prev;
@@ -35,7 +36,6 @@ public:
 	void pushBack(T value);
 
 	void pushFront(T value);
-    
 };
 
 

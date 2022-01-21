@@ -3,6 +3,7 @@
 #include <iostream>
 #include <string>
 
+
 string Student::toString()
 {
 	string strName = name;
@@ -17,6 +18,20 @@ string Student::toString()
 	string allData = strName + " " + strSurname + " " + strSecondName + " " + strDateOfBirht + " " +
 		strCourseStartDate + " " + strId + " " + strDepartmentId + " " + strDiaryId + " " + strLearningProgrammingId;
 	return allData;
+}
+
+
+string Student::serialize()
+{
+    return  "|Name|" + name +
+            "|Surname|" + surname +
+            "|SecondName|" + secondName +
+            "|DateOfBirth|" + dateOfBirth.getString() +
+            "|CourseStartDate|" + courseStartDate.getString() +
+            "|ID|" + to_string( id ) +
+            "|DepartmentId|" + to_string( departmentId ) +
+            "|DiaryId|" + to_string( diaryId ) +
+            "|LearningProgrammId|" + to_string( learningProgrammId ) + "|";
 }
 
 
