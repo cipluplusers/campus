@@ -17,7 +17,8 @@ string Teacher::toString()
 	return allData;
 }
 
-std::ostream& operator<< (std::ostream& out, const Teacher& teacher)
+
+std::ostream& operator<< (std::ostream& out, Teacher& teacher)
 {
 	out << teacher.toString() << endl;
 

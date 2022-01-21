@@ -8,7 +8,7 @@
 #include "ClassMark.h"
 #include "ClassStudent.h"
 #include "ClassSubject.h"
-#include "сlassTeacher.h"
+#include "ClassTeacher.h"
 #include "LinkedList.h"
 
 

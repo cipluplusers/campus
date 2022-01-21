@@ -33,7 +33,6 @@ void LinkedList<T>::addToPosition(T value, T position)
 }
 
 template <typename T>
-
 int LinkedList<T>::deleteFromPosition(T position)
 {
     if (head == nullptr)
@@ -58,8 +57,8 @@ int LinkedList<T>::deleteFromPosition(T position)
     }
 }
 
-template <typename T>
 
+template <typename T>
 void LinkedList<T>::printList()
 
 {

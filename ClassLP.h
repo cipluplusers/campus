@@ -13,10 +13,9 @@ public:
     unsigned long id;
     LinkedList<string> subjects;
 
-    string toString();
+    //string toString();
 
-	friend std::ostream& operator<< (std::ostream& out, LearningProgram& lp);
-
+	//friend std::ostream& operator<< (std::ostream& out, LearningProgram& lp);
 };
 
 #endif

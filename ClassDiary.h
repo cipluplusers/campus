@@ -2,6 +2,7 @@
 #define CLASSDIARY_H
 #include <string>
 #include "LinkedList.h"
+#include "ClassMark.h"
 
 using namespace std;
 
@@ -11,8 +12,7 @@ public:
     
     unsigned long id;
     unsigned long studentId;
-    LinkedList<Marks> Marks;
-
+    LinkedList<Mark> Marks;
     string toString();
 
 	friend ostream& operator<< (ostream& out, Diary& diary);
