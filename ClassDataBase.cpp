@@ -21,3 +21,21 @@ void DataBase::removeMark(int position)
 {
     getMarks().deleteFromPosition(position);
 }
+
+
+Diary DataBase::getDiaryByStudentId(unsigned long StudentId)
+{
+    Node<Diary> *temp = getDiaries().head;
+    
+    while( temp != nullptr )
+    {
+        if ( temp->data.studentId == StudentId )
+        {
+            return temp->data;
+        }
+        
+        temp = temp->next;
+    }
+    
+    return temp->data;
+}
