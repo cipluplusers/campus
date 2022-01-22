@@ -121,6 +121,9 @@ public:
     
 	Subject addSubject();
 	void removeSubject();
+    
+    Diary getDiaryByStudentId(unsigned long StudentId);
+    Diary getDiaryById(unsigned long id);
 };
 
 
