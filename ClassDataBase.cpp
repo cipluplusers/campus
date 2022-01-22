@@ -39,3 +39,21 @@ Diary DataBase::getDiaryByStudentId(unsigned long StudentId)
     
     return temp->data;
 }
+
+
+Diary DataBase::getDiaryById(unsigned long id)
+{
+    Node<Diary> *temp = getDiaries().head;
+    
+    while( temp != nullptr )
+    {
+        if ( temp->data.id == id )
+        {
+            return temp->data;
+        }
+        
+        temp = temp->next;
+    }
+    
+    return temp->data;
+}
