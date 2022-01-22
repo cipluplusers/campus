@@ -133,7 +133,7 @@ int LinkedList<T>::getPositionOfElement(T element)
         return 0;
     }
     
-    while (head->data == node->data)
+    while (head->data != node->data)
     {
         head = head->next;
         position ++;
