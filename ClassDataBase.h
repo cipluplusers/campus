@@ -113,8 +113,8 @@ public:
 	Department addDepartment();
 	void removeDepartment();
     
-	Mark addMark();
-	void removeMark();
+	void addMark(Mark obj);
+	void removeMark(int position);
     
 	LearningProgram addLearningProgram();
 	void removeLearningProgram();

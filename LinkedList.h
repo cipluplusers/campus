@@ -27,9 +27,9 @@ public:
 		head = nullptr;
 	}
 
-    void addToPosition(T value, T position);
+    void addToPosition(T value, int position);
 
-    int deleteFromPosition(T position);
+    int deleteFromPosition(int position);
     
     void printList();
 
