@@ -28,9 +28,3 @@ string Subject::serialize()
             "|SubjectCountOfCredits|" + to_string( subjectCountOfCredits ) + "|";
 }
 
-
-int main()
-{
-    Subject s1;
-    cout << s1.serialize() << endl;
-}
