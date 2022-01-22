@@ -1,5 +1,6 @@
 #ifndef CLASSDATABASE
 #define CLASSDATABASE
+
 #include "ClassDataBase.h"
 #include "ClassDepartment.h"
 #include "ClassDiary.h"
@@ -13,11 +14,9 @@
 
 using namespace std;
 
-
 class DataBase
 {
 private:
-    
 	LinkedList<Student> students;
 	LinkedList<Teacher> teachers;
 	LinkedList<Mark> marks;
@@ -113,8 +112,8 @@ public:
 	Department addDepartment();
 	void removeDepartment();
     
-	Mark addMark();
-	void removeMark();
+	void addMark(Mark obj);
+	void removeMark(int position);
     
 	LearningProgram addLearningProgram();
 	void removeLearningProgram();

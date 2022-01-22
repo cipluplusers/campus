@@ -7,7 +7,7 @@ using namespace std;
 
 
 template <typename T>
-void LinkedList<T>::addToPosition(T value, T position)
+void LinkedList<T>::addToPosition(T value, int position)
 {
     Node<T>* node = new Node<T>;
 
@@ -35,7 +35,7 @@ void LinkedList<T>::addToPosition(T value, T position)
 
 
 template <typename T>
-int LinkedList<T>::deleteFromPosition(T position)
+int LinkedList<T>::deleteFromPosition(int position)
 {
     if (head == nullptr)
     {
@@ -52,11 +52,12 @@ int LinkedList<T>::deleteFromPosition(T position)
     {
         Node<T>* a = head;
         
-        for (int i = position; i > 1; i--) a = a->next;
+        for (int i = position; i > 1; i--) { a = a->next; }
+        if (a == head) { head = a->next; }
         
-        if (a == head) head = a->next;
         a->prev->next = a->next;
         a->next->prev = a->prev;
+        
         delete a;
     }
 }

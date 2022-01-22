@@ -9,3 +9,15 @@
 #include "LinkedList.h"
 #include <iostream>
 #include <string>
+
+
+void DataBase::addMark(Mark obj)
+{
+    getMarks().pushBack(obj);
+}
+
+
+void DataBase::removeMark(int position)
+{
+    getMarks().deleteFromPosition(position);
+}
