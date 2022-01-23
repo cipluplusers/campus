@@ -5,8 +5,9 @@
 
 using namespace std;
 
+
 template <typename T>
-void LinkedList<T>::addToPosition(T value, T position)
+void LinkedList<T>::addToPosition(T value, int position)
 {
     Node<T>* node = new Node<T>;
 
@@ -21,10 +22,7 @@ void LinkedList<T>::addToPosition(T value, T position)
     {
         Node<T>* p = head;
 
-        for (int i = position; i > 1; i--)
-        {
-            p = p->next;
-        }
+        for (int i = position; i > 1; i--) { p = p->next; }
         p->prev->next = node;
         node->prev = p->prev;
         node->next = p;
@@ -32,8 +30,9 @@ void LinkedList<T>::addToPosition(T value, T position)
     }
 }
 
+
 template <typename T>
-int LinkedList<T>::deleteFromPosition(T position)
+int LinkedList<T>::deleteFromPosition(int position)
 {
     if (head == nullptr)
     {
@@ -49,10 +48,13 @@ int LinkedList<T>::deleteFromPosition(T position)
     else
     {
         Node<T>* a = head;
-        for (int i = position; i > 1; i--) a = a->next;
-        if (a == head) head = a->next;
+        
+        for (int i = position; i > 1; i--) { a = a->next; }
+        if (a == head) { head = a->next; }
+        
         a->prev->next = a->next;
         a->next->prev = a->prev;
+        
         delete a;
     }
 }
@@ -60,9 +62,8 @@ int LinkedList<T>::deleteFromPosition(T position)
 
 template <typename T>
 void LinkedList<T>::printList()
-
 {
-    if (head == nullptr) cout << "\nList is empty\n\n";
+    if (head == nullptr) { cout << "\nList is empty\n\n"; }
     else
     {
         Node<T>* current = head;
@@ -73,49 +74,43 @@ void LinkedList<T>::printList()
             cout << current->data << " ";
             current = current->next;
         } while (current != head);
+        
         cout << "\n\n";
     }
 }
 
-template <typename T>
 
+template <typename T>
 void LinkedList<T>::pushBack(T value)
 {
-    Node<T>* node = new Node;
+    Node<T>* node = new Node<T>;
     Node<T>* last = head;
     node->data = value;
-
     node->next = nullptr;
 
-    if (head = nullptr)
+    if (head == nullptr)
     {
         node->prev = nullptr;
         head = node;
         return;
     }
-    while (last->next != nullptr)
-    {
-        last = last->next;
-    }
+    
+    while (last->next != nullptr) { last = last->next; }
 
     last->next = node;
     node->prev = last;
 }
 
-template <typename T>
 
+template <typename T>
 void LinkedList<T>::pushFront(T value)
 {
     Node<T>* node = new Node<T>;
     node->data = value;
-
     node->next = head;
     node->prev = nullptr;
 
-    if (head != nullptr)
-    {
-        head->prev = node;
-    }
+    if (head != nullptr) { head->prev = node; }
 
     head = node;
 }

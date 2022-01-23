@@ -3,7 +3,9 @@
 #include <string>
 #include "ClassDate.h"
 
+
 using namespace std;
+
 
 class Student
 {
@@ -20,9 +22,9 @@ public:
     unsigned long learningProgrammId;
 
     string toString();
+    string serialize();
 
 	friend std::ostream& operator<< (std::ostream& out, const Student& student);
-
 };
 
 #endif /* CLASSSTUDENT_H */

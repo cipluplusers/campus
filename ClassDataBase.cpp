@@ -9,3 +9,51 @@
 #include "LinkedList.h"
 #include <iostream>
 #include <string>
+
+
+void DataBase::addMark(Mark obj)
+{
+    getMarks().pushBack(obj);
+}
+
+
+void DataBase::removeMark(int position)
+{
+    getMarks().deleteFromPosition(position);
+}
+
+
+Diary DataBase::getDiaryByStudentId(unsigned long StudentId)
+{
+    Node<Diary> *temp = getDiaries().head;
+    
+    while( temp != nullptr )
+    {
+        if ( temp->data.studentId == StudentId )
+        {
+            return temp->data;
+        }
+        
+        temp = temp->next;
+    }
+    
+    return temp->data;
+}
+
+
+Diary DataBase::getDiaryById(unsigned long id)
+{
+    Node<Diary> *temp = getDiaries().head;
+    
+    while( temp != nullptr )
+    {
+        if ( temp->data.id == id )
+        {
+            return temp->data;
+        }
+        
+        temp = temp->next;
+    }
+    
+    return temp->data;
+}

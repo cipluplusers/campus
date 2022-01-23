@@ -6,19 +6,19 @@ template <typename T>
 class Node
 {
 public:
+    
 	T data;
 	Node* next;
 	Node* prev;
 };
 
-template <class T>
 
+template <class T>
 class LinkedList
 {
 public:
 
 	Node<T>* head;
-
 
 public:
 
@@ -27,17 +27,15 @@ public:
 		head = nullptr;
 	}
 
-    void addToPosition(T value, T position);
+    void addToPosition(T value, int position);
 
-    int deleteFromPosition(T position);
+    int deleteFromPosition(int position);
     
     void printList();
 
 	void pushBack(T value);
 
 	void pushFront(T value);
-
-    
 };
 
 
