@@ -46,7 +46,7 @@ Diary DataBase::getDiaryByStudentId(unsigned long StudentId)
         temp = temp->next;
     }
     
-    return temp->data;
+    return nullptr;
 }
 
 
@@ -64,7 +64,7 @@ Diary DataBase::getDiaryById(unsigned long id)
         temp = temp->next;
     }
     
-    return temp->data;
+    return nullptr;
 }
 
 
@@ -80,7 +80,7 @@ Subject DataBase::getSubjectByCaption(string caption)
         }
         element = element->next;
     }
-    return element->data;
+    return nullptr;
 }
 
 
@@ -96,7 +96,7 @@ Subject DataBase::getSubjectByCountOfCredits(unsigned long countOfCredits)
         }
         element = element->next;
     }
-    return element->data;
+    return nullptr;
 }
 
 
@@ -112,5 +112,5 @@ Subject DataBase::getSubjectById(unsigned long id)
         }
         element = element->next;
     }
-    return element->data;
+    return nullptr;
 }
