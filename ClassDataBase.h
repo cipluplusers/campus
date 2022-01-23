@@ -119,11 +119,16 @@ public:
 	LearningProgram addLearningProgram();
 	void removeLearningProgram();
     
-	Subject addSubject();
-	void removeSubject();
+	void addSubject(Subject element);
+	void removeSubject(int position);
     
     Diary getDiaryByStudentId(unsigned long StudentId);
     Diary getDiaryById(unsigned long id);
+
+	Subject getSubjectByCaption(string caption);
+	Subject getSubjectById(unsigned long id);
+	Subject getSubjectByCountOfCredits(unsigned long countOfCredits);
+
 };
 
 
