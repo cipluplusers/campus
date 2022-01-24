@@ -133,10 +133,18 @@ int LinkedList<T>::getPositionOfElement(T element)
         return 0;
     }
     
-    while (temp->data != element)
+    if (element == nullptr)
     {
-        temp = temp->next;
-        position ++;
+        cout << "\nList is empty\n\n";
+        return 0;
+    }
+    else
+    {
+        while (temp->data != element)
+        {
+            temp = temp->next;
+            position ++;
+        }
     }
     return position;
 }
