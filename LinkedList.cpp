@@ -124,7 +124,6 @@ template <typename T>
 int LinkedList<T>::getPositionOfElement(T element)
 {
     Node<T>* temp = head;
-    node->data = element;
     
     int position = 0;
     
