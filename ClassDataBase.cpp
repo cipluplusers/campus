@@ -22,6 +22,17 @@ void DataBase::removeMark(int position)
     getMarks().deleteFromPosition(position);
 }
 
+void DataBase::addLearningProgram(LearningProgram lp)
+{
+  getLearningPrograms().pushBack(lp);
+}
+
+void DataBase::removeLearningProgram(unsigned long removeId)
+{
+  unsigned long position = removeId; 
+  getLearningPrograms().deleteFromPosition(position);
+}
+
 void DataBase::addSubject(Subject element)
 {
     getSubjects().pushBack(element);
@@ -29,7 +40,7 @@ void DataBase::addSubject(Subject element)
 
 void DataBase::removeSubject(int position)
 {
-    getSubjects().deleteFromPosition(position)
+    getSubjects().deleteFromPosition(position);
 }
 
 Diary DataBase::getDiaryByStudentId(unsigned long StudentId)
@@ -70,11 +81,11 @@ Diary DataBase::getDiaryById(unsigned long id)
 
 Subject DataBase::getSubjectByCaption(string caption)
 {
-    Node<Subject>* element == getSubjects().head;
+    Node<Subject>* element = getSubjects().head;
 
     while (element != nullptr)
     {
-        if (element->data.subjectCaption = caption)
+        if (element->data.subjectCaption == caption)
         {
             return element->data;
         }
