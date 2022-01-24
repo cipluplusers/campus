@@ -27,9 +27,9 @@ void DataBase::addLearningProgram(LearningProgram lp)
   getLearningPrograms().pushBack(lp);
 }
 
-void DataBase::removeLearningProgram(unsigned long id)
+void DataBase::removeLearningProgram(unsigned long removeId)
 {
-  unsigned long position = id; 
+  unsigned long position = removeId; 
   getLearningPrograms().deleteFromPosition(position);
 }
 
