@@ -2,6 +2,7 @@
 #include <iostream>
 #include <string>
 
+
 string Department::toString()
 {
 	string strId = to_string(id);
@@ -10,8 +11,13 @@ string Department::toString()
 }
 
 
-std::ostream& operator<< (std::ostream& out, Department& department)
+string Department::serialize()
+{
+    return "|Title|" + title + "|ID|" + to_string( id ) + "|";
+}
 
+
+std::ostream& operator<< (std::ostream& out, Department& department)
 {
 	out << department.toString() << endl;
 

@@ -2,7 +2,9 @@
 #define CLASSDEPARTMENT_H
 #include <string>
 
+
 using namespace std;
+
 
 class Department
 {
@@ -12,9 +14,9 @@ public:
 	unsigned long id;
 
 	string toString();
-
-	friend std::ostream& operator<< (std::ostream& out, const Department& department);
-
+    string serialize();
+    
+	friend std::ostream& operator<< (std::ostream& out, Department& department);
 };
 
 #endif // CLASSDEPARTMENT_Hdfghjk
