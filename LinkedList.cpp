@@ -123,8 +123,7 @@ void LinkedList<T>::pushFront(T value)
 template <typename T>
 int LinkedList<T>::getPositionOfElement(T element)
 {
-    Node<T>* node = new Node<T>;
-    Node<T>* l = head;
+    Node<T>* temp = head;
     node->data = element;
     
     int position = 0;
@@ -134,9 +133,9 @@ int LinkedList<T>::getPositionOfElement(T element)
         return 0;
     }
     
-    while (l->data != node->data)
+    while (temp->data != element)
     {
-        l = l->next;
+        temp = temp->next;
         position ++;
     }
     return position;
