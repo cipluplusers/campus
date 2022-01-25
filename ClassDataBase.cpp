@@ -22,10 +22,12 @@ void DataBase::removeMark(int position)
     getMarks().deleteFromPosition(position);
 }
 
+
 void DataBase::addLearningProgram(LearningProgram lp)
 {
   getLearningPrograms().pushBack(lp);
 }
+
 
 void DataBase::removeLearningProgram(unsigned long removeId)
 {
@@ -33,15 +35,18 @@ void DataBase::removeLearningProgram(unsigned long removeId)
   getLearningPrograms().deleteFromPosition(position);
 }
 
+
 void DataBase::addSubject(Subject element)
 {
     getSubjects().pushBack(element);
 }
 
+
 void DataBase::removeSubject(int position)
 {
     getSubjects().deleteFromPosition(position);
 }
+
 
 void DataBase::addLearningProgram(LearningProgram lp)
 {
@@ -116,7 +121,7 @@ Subject DataBase::getSubjectByCaption(string caption)
         element = element->next;
     }
   
-    return element->data;
+    return nullptr;
 }
 
 
@@ -133,7 +138,7 @@ Subject DataBase::getSubjectByCountOfCredits(unsigned long countOfCredits)
         element = element->next;
     }
 
-    return element->data;
+    return nullptr;
 }
 
 
@@ -150,6 +155,6 @@ Subject DataBase::getSubjectById(unsigned long id)
         element = element->next;
     }
   
-    return element->data;
+    return nullptr;
 }
 
