@@ -22,26 +22,30 @@ void DataBase::removeMark(int position)
     getMarks().deleteFromPosition(position);
 }
 
+
 void DataBase::addLearningProgram(LearningProgram lp)
 {
   getLearningPrograms().pushBack(lp);
 }
 
-void DataBase::removeLearningProgram(unsigned long removeId)
+
+void DataBase::removeLearningProgram(int position)
 {
-  unsigned long position = removeId; 
   getLearningPrograms().deleteFromPosition(position);
 }
+
 
 void DataBase::addSubject(Subject element)
 {
     getSubjects().pushBack(element);
 }
 
+
 void DataBase::removeSubject(int position)
 {
     getSubjects().deleteFromPosition(position);
 }
+
 
 Diary DataBase::getDiaryByStudentId(unsigned long StudentId)
 {
@@ -57,7 +61,7 @@ Diary DataBase::getDiaryByStudentId(unsigned long StudentId)
         temp = temp->next;
     }
     
-    return nullptr;
+    return temp->data;
 }
 
 
@@ -75,7 +79,7 @@ Diary DataBase::getDiaryById(unsigned long id)
         temp = temp->next;
     }
     
-    return nullptr;
+    return temp->data;
 }
 
 
@@ -91,7 +95,7 @@ Subject DataBase::getSubjectByCaption(string caption)
         }
         element = element->next;
     }
-    return nullptr;
+    return element->data;
 }
 
 
@@ -107,7 +111,7 @@ Subject DataBase::getSubjectByCountOfCredits(unsigned long countOfCredits)
         }
         element = element->next;
     }
-    return nullptr;
+    return element->data;
 }
 
 
@@ -123,5 +127,6 @@ Subject DataBase::getSubjectById(unsigned long id)
         }
         element = element->next;
     }
-    return nullptr;
+    return element->data;
 }
+

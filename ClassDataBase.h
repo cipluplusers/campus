@@ -117,7 +117,7 @@ public:
 	void removeMark(int position);
     
 	void addLearningProgram(LearningProgram lp);
-	void removeLearningProgram(unsigned long removeId);
+    void removeLearningProgram(int position);
     
 	void addSubject(Subject element);
 	void removeSubject(int position);

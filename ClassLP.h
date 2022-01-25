@@ -16,6 +16,7 @@ public:
     unsigned long id;
     LinkedList<Subject> subjects;
 
+    string serialize();
     //string toString();
 	//friend std::ostream& operator<< (std::ostream& out, LearningProgram& lp);
 };

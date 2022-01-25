@@ -23,3 +23,21 @@ std::ostream& operator<< (std::ostream& out, Diary& diary)
 }
 */
 
+
+string Diary::serialize()
+{
+    Node<Mark> *element = Marks.head;
+    string tempStrSub = "|";
+    
+    for (int i = 0; i < Marks.listLength(); i++)
+    {
+        tempStrSub = tempStrSub + to_string( element->data.id ) + "|";
+        element = element->next;
+    }
+    
+    return  "|ID|" + to_string(id) +
+            "|StudentId|" + to_string(studentId) + 
+            "|Marks|" + "[" + tempStrSub + "]|";
+}
+
+
