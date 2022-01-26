@@ -129,10 +129,10 @@ public:
 	Subject getSubjectById(unsigned long id);
 	Subject getSubjectByCountOfCredits(unsigned long countOfCredits);
 
-	Mark getMarksBySubjectId(unsigned long subjectId)
-	Mark getMarksByTeacherId(unsigned long teacherId)
-	Mark getMarksByStudentId(unsigned long studentId)
-	Mark getMarksById(unsigned long id)
+	Mark getMarksBySubjectId(unsigned long subjectId);
+	Mark getMarksByTeacherId(unsigned long teacherId);
+	Mark getMarksByStudentId(unsigned long studentId);
+	Mark getMarksById(unsigned long id);
 };
 
 
