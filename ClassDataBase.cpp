@@ -124,8 +124,6 @@ Subject DataBase::getSubjectById(unsigned long id)
         element = element->next;
     }
     return nullptr;
-}
-
 
 Student DataBase::getStudentById(unsigned long id)
 {
