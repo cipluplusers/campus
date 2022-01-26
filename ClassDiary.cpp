@@ -29,7 +29,7 @@ string Diary::serialize()
     Node<Mark> *element = Marks.head;
     string tempStrSub = "|";
     
-    for (int i = 0; i < Marks.listLength(); i++)
+    while (element != nullptr)
     {
         tempStrSub = tempStrSub + to_string( element->data.id ) + "|";
         element = element->next;

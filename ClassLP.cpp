@@ -27,7 +27,7 @@ string LearningProgram::serialize()
     Node<Subject> *element = subjects.head;
     string tempStrSub = "|";
     
-    for (int i = 0; i < subjects.listLength(); i++)
+    while (element != nullptr)
     {
         tempStrSub = tempStrSub + to_string( element->data.subjectId ) + "|";
         element = element->next;
