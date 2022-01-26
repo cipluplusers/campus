@@ -117,7 +117,7 @@ public:
 	void removeMark(int position);
     
 	void addLearningProgram(LearningProgram lp);
-	void removeLearningProgram(unsigned long removeId);
+    void removeLearningProgram(unsigned long removeId);
     
 	void addSubject(Subject element);
 	void removeSubject(int position);
@@ -128,10 +128,9 @@ public:
 	Subject getSubjectByCaption(string caption);
 	Subject getSubjectById(unsigned long id);
 	Subject getSubjectByCountOfCredits(unsigned long countOfCredits);
-	Student getStudentByName(string name);
-	Student getStudentById(unsigned long id);
-	Student getStudentBySurname(string surname);
-
+    
+    string loadDepartments();
+    void unloadDepartments()
 };
 
 

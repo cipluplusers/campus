@@ -9,6 +9,7 @@
 #include "LinkedList.h"
 #include <iostream>
 #include <string>
+#include <fstream>
 
 
 void DataBase::addMark(Mark obj)
@@ -22,10 +23,12 @@ void DataBase::removeMark(int position)
     getMarks().deleteFromPosition(position);
 }
 
+
 void DataBase::addLearningProgram(LearningProgram lp)
 {
   getLearningPrograms().pushBack(lp);
 }
+
 
 void DataBase::removeLearningProgram(unsigned long removeId)
 {
@@ -33,15 +36,42 @@ void DataBase::removeLearningProgram(unsigned long removeId)
   getLearningPrograms().deleteFromPosition(position);
 }
 
+
 void DataBase::addSubject(Subject element)
 {
     getSubjects().pushBack(element);
 }
 
+
 void DataBase::removeSubject(int position)
 {
     getSubjects().deleteFromPosition(position);
 }
+
+
+void DataBase::addLearningProgram(LearningProgram lp)
+{
+  getLearningPrograms().pushBack(lp);
+}
+
+
+void DataBase::removeLearningProgram(int position)
+{
+  getLearningPrograms().deleteFromPosition(position);
+}
+
+
+void DataBase::addSubject(Subject element)
+{
+    getSubjects().pushBack(element);
+}
+
+
+void DataBase::removeSubject(int position)
+{
+    getSubjects().deleteFromPosition(position);
+}
+
 
 Diary DataBase::getDiaryByStudentId(unsigned long StudentId)
 {
@@ -91,6 +121,7 @@ Subject DataBase::getSubjectByCaption(string caption)
         }
         element = element->next;
     }
+  
     return nullptr;
 }
 
@@ -107,6 +138,7 @@ Subject DataBase::getSubjectByCountOfCredits(unsigned long countOfCredits)
         }
         element = element->next;
     }
+
     return nullptr;
 }
 
@@ -123,51 +155,63 @@ Subject DataBase::getSubjectById(unsigned long id)
         }
         element = element->next;
     }
-    return nullptr;
-
-Student DataBase::getStudentById(unsigned long id)
-{
-    Node<Student>* temp = getStudents().head;
-
-    while (temp != nullptr)
-    {
-        if (temp->data.studentId == id)
-        {
-            return temp->data;
-        }
-        temp = temp->next;
-    }
+  
     return nullptr;
 }
 
 
-Student DataBase::getStudentByName(string name)
+string DataBase::loadDepartments()
 {
-    Node<Student>* temp = getStudents().head;
-
-    while (temp != nullptr)
+    string path = "Departments.txt";
+    string str = "";
+    ifstream fin;
+    
+    fin.open(path);
+    
+    if ( !fin.is_open() )
     {
-        if (temp->data.name == name)
-        {
-            return temp->data;
-        }
-        temp = temp->next;
+        cout << "File wasn't open" << endl;
     }
-    return nullptr;
+    else
+    {
+        string temp;
+        while ( getline(fin, temp) )
+        {
+            str += temp;
+        }
+    }
+    
+    fin.close();
+    
+    return str;
 }
 
 
-Student DataBase::getStudentBySurname(string surname)
+void DataBase::unloadDepartments()
 {
-    Node<Student>* temp = getStudents().head;
-
-    while (temp != nullptr)
+    string path = "Departments.txt";
+    ofstream fout;
+    
+    fout.open(path);
+    
+    if ( !fout.is_open() )
     {
-        if (temp->data.surname == surname)
-        {
-            return temp->data;
-        }
-        temp = temp->next;
+        cout << "File wasn't open" << endl;
     }
-    return nullptr;
+    else
+    {
+        string str = "";
+        
+        Node<Department> *temp = getDepartments().head;
+        while ( temp != nullptr )
+        {
+            string tempStr = "";
+            tempStr = temp->data.serialize();
+            str += tempStr;
+            temp = temp->next;
+        }
+        fout << str;
+    }
+    
+    fout.close();
 }
