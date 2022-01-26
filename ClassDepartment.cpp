@@ -4,9 +4,8 @@
 
 string Department::toString()
 {
-	string strCaption = caption;
 	string strId = to_string(id);
-	string allData = strCaption + " " + strId;
+	string allData = title + " " + strId;
 	return allData;
 }
 

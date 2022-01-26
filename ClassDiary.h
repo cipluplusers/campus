@@ -7,7 +7,7 @@ class Diary {
 public:
     unsigned long id;
     unsigned long studentId;
-    int marks;
+    LinkedList<int> Marks;
 
     string toString();
 

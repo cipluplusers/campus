@@ -7,7 +7,7 @@ class Department
 {
 public:
 
-	string caption;
+	string title;
 	unsigned long id;
 
 	string toString();

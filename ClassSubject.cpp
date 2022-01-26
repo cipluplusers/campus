@@ -1,4 +1,4 @@
-﻿#include "Subject.h"
+﻿#include "ClassSubject.h"
 #include <iostream>
 #include <string>
 

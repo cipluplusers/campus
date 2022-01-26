@@ -10,6 +10,7 @@ public:
 	unsigned long id;
 	unsigned long subjectId;
 	unsigned long teacherId;
+	unsigned long studentId;
 	int value;
 
 	string toString();
