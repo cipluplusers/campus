@@ -124,8 +124,6 @@ Subject DataBase::getSubjectById(unsigned long id)
         element = element->next;
     }
     return nullptr;
-}
-
 
 Student DataBase::getStudentById(unsigned long id)
 {
@@ -133,7 +131,7 @@ Student DataBase::getStudentById(unsigned long id)
 
     while (temp != nullptr)
     {
-        if (temp->data.id == id)
+        if (temp->data.studentId == id)
         {
             return temp->data;
         }
@@ -166,70 +164,6 @@ Student DataBase::getStudentBySurname(string surname)
     while (temp != nullptr)
     {
         if (temp->data.surname == surname)
-        {
-            return temp->data;
-        }
-        temp = temp->next;
-    }
-    return nullptr;
-}
-
-
-LearningProgram DataBase::getLearningProgramById(unsigned long id)
-{
-    Node<LearningProgram>* temp = getLearningPrograms().head;
-
-    while (temp != nullptr)
-    {
-        if (temp->data.id == id)
-        {
-            return temp->data;
-        }
-        temp = temp->next;
-    }
-    return nullptr;
-}
-
-
-LearningProgram DataBase::getLearningProgramByTitle(string title)
-{
-    Node<LearningProgram>* temp = getLearningPrograms().head;
-
-    while (temp != nullptr)
-    {
-        if (temp->data.title == title)
-        {
-            return temp->data;
-        }
-        temp = temp->next;
-    }
-    return nullptr;
-}
-
-
-Department DataBase::getDepartmentByTitle(string title)
-{
-    Node<Department>* temp = getDepartments().head;
-
-    while (temp != nullptr)
-    {
-        if (temp->data.title == title)
-        {
-            return temp->data;
-        }
-        temp = temp->next;
-    }
-    return nullptr;
-}
-
-
-Department DataBase::getDepartmentById(unsigned long id)
-{
-    Node<Department>* temp = getDepartments().head;
-
-    while (temp != nullptr)
-    {
-        if (temp->data.id == id)
         {
             return temp->data;
         }
