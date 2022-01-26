@@ -130,7 +130,7 @@ public:
 	Subject getSubjectByCountOfCredits(unsigned long countOfCredits);
     
     string loadDepartments();
-    void unloadDepartments()
+    void unloadDepartments();
 };
 
 
