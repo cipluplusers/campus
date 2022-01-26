@@ -132,7 +132,7 @@ public:
 	Mark getMarksBySubjectId(unsigned long subjectId);
 	Mark getMarksByTeacherId(unsigned long teacherId);
 	Mark getMarksByStudentId(unsigned long studentId);
-	Mark getMarksById(unsigned long id);
+	Mark getMarkById(unsigned long id);
 };
 
 

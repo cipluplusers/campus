@@ -127,7 +127,7 @@ Subject DataBase::getSubjectById(unsigned long id)
 }
 
 
-Mark DataBase::getMarksBySubjectId(unsigned long subjectId)
+LinkedList<Mark> DataBase::getMarksBySubjectId(unsigned long subjectId)
 {
 	Node<Mark>* temp = getMarks().head;
 
@@ -145,7 +145,7 @@ Mark DataBase::getMarksBySubjectId(unsigned long subjectId)
 }
 
 
-Mark DataBase::getMarksByTeacherId(unsigned long teacherId)
+LinkedList<Mark> DataBase::getMarksByTeacherId(unsigned long teacherId)
 {
 	Node<Mark>* temp = getMarks().head;
 
@@ -161,7 +161,7 @@ Mark DataBase::getMarksByTeacherId(unsigned long teacherId)
 }
 
 
-Mark DataBase::getMarksByStudentId(unsigned long studentId)
+LinkedList<Mark> DataBase::getMarksByStudentId(unsigned long studentId)
 {
 	Node<Mark>* temp = getMarks().head;
 
@@ -177,7 +177,7 @@ Mark DataBase::getMarksByStudentId(unsigned long studentId)
 }
 
 
-Mark DataBase::getMarksById(unsigned long id)
+Mark DataBase::getMarkById(unsigned long id)
 {
 	Node<Mark>* temp = getMarks().head;
 
