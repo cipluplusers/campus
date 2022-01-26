@@ -17,7 +17,6 @@ public:
     LinkedList<Mark> Marks;
     
     string toString();
-    string serialize();
 
 	friend ostream& operator<< (ostream& out, Diary& diary);
 };

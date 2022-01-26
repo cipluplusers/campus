@@ -22,12 +22,10 @@ void DataBase::removeMark(int position)
     getMarks().deleteFromPosition(position);
 }
 
-
 void DataBase::addLearningProgram(LearningProgram lp)
 {
   getLearningPrograms().pushBack(lp);
 }
-
 
 void DataBase::removeLearningProgram(unsigned long removeId)
 {
@@ -35,42 +33,15 @@ void DataBase::removeLearningProgram(unsigned long removeId)
   getLearningPrograms().deleteFromPosition(position);
 }
 
-
 void DataBase::addSubject(Subject element)
 {
     getSubjects().pushBack(element);
 }
 
-
 void DataBase::removeSubject(int position)
 {
     getSubjects().deleteFromPosition(position);
 }
-
-
-void DataBase::addLearningProgram(LearningProgram lp)
-{
-  getLearningPrograms().pushBack(lp);
-}
-
-
-void DataBase::removeLearningProgram(int position)
-{
-  getLearningPrograms().deleteFromPosition(position);
-}
-
-
-void DataBase::addSubject(Subject element)
-{
-    getSubjects().pushBack(element);
-}
-
-
-void DataBase::removeSubject(int position)
-{
-    getSubjects().deleteFromPosition(position);
-}
-
 
 Diary DataBase::getDiaryByStudentId(unsigned long StudentId)
 {
@@ -120,7 +91,6 @@ Subject DataBase::getSubjectByCaption(string caption)
         }
         element = element->next;
     }
-  
     return nullptr;
 }
 
@@ -137,7 +107,6 @@ Subject DataBase::getSubjectByCountOfCredits(unsigned long countOfCredits)
         }
         element = element->next;
     }
-
     return nullptr;
 }
 
@@ -154,7 +123,51 @@ Subject DataBase::getSubjectById(unsigned long id)
         }
         element = element->next;
     }
-  
+    return nullptr;
+
+Student DataBase::getStudentById(unsigned long id)
+{
+    Node<Student>* temp = getStudents().head;
+
+    while (temp != nullptr)
+    {
+        if (temp->data.studentId == id)
+        {
+            return temp->data;
+        }
+        temp = temp->next;
+    }
     return nullptr;
 }
 
+
+Student DataBase::getStudentByName(string name)
+{
+    Node<Student>* temp = getStudents().head;
+
+    while (temp != nullptr)
+    {
+        if (temp->data.name == name)
+        {
+            return temp->data;
+        }
+        temp = temp->next;
+    }
+    return nullptr;
+}
+
+
+Student DataBase::getStudentBySurname(string surname)
+{
+    Node<Student>* temp = getStudents().head;
+
+    while (temp != nullptr)
+    {
+        if (temp->data.surname == surname)
+        {
+            return temp->data;
+        }
+        temp = temp->next;
+    }
+    return nullptr;
+}

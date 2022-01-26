@@ -135,21 +135,6 @@ public:
 
         head = node;
     }
-    
-    
-    int listLength()
-    {
-        Node<T>* elem = head;
-        int count = 0;
-        
-        while ( elem != nullptr )
-        {
-            elem = elem->next;
-            count++;
-        }
-        
-        return  count;
-    }
 };
 
 
