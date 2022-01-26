@@ -129,8 +129,8 @@ public:
 	Subject getSubjectById(unsigned long id);
 	Subject getSubjectByCountOfCredits(unsigned long countOfCredits);
 
-	Student getStudentById(unsigned long id);
 	Student getStudentByName(string name);
+	Student getStudentById(unsigned long id);
 	Student getStudentBySurname(string surname);
 };
 

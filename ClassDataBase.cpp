@@ -158,6 +158,7 @@ Student DataBase::getStudentByName(string name)
     return nullptr;
 }
 
+
 Student DataBase::getStudentBySurname(string surname)
 {
     Node<Student>* temp = getStudents().head;
