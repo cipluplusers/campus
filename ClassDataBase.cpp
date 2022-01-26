@@ -124,4 +124,50 @@ Subject DataBase::getSubjectById(unsigned long id)
         element = element->next;
     }
     return nullptr;
+
+Student DataBase::getStudentById(unsigned long id)
+{
+    Node<Student>* temp = getStudents().head;
+
+    while (temp != nullptr)
+    {
+        if (temp->data.studentId == id)
+        {
+            return temp->data;
+        }
+        temp = temp->next;
+    }
+    return nullptr;
+}
+
+
+Student DataBase::getStudentByName(string name)
+{
+    Node<Student>* temp = getStudents().head;
+
+    while (temp != nullptr)
+    {
+        if (temp->data.name == name)
+        {
+            return temp->data;
+        }
+        temp = temp->next;
+    }
+    return nullptr;
+}
+
+
+Student DataBase::getStudentBySurname(string surname)
+{
+    Node<Student>* temp = getStudents().head;
+
+    while (temp != nullptr)
+    {
+        if (temp->data.surname == surname)
+        {
+            return temp->data;
+        }
+        temp = temp->next;
+    }
+    return nullptr;
 }
