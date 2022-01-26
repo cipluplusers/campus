@@ -125,3 +125,69 @@ Subject DataBase::getSubjectById(unsigned long id)
     }
     return nullptr;
 }
+
+
+Mark DataBase::getMarksBySubjectId(unsigned long subjectId)
+{
+	Node<Mark>* temp = getMarks().head;
+
+	while (temp != nullptr)
+	{
+		if (temp->data.subjectId == subjectId)
+		{
+			return temp->data;
+		}
+
+		temp = temp->next;
+	}
+
+	return nullptr;
+}
+
+
+Mark DataBase::getMarksByTeacherId(unsigned long teacherId)
+{
+	Node<Mark>* temp = getMarks().head;
+
+	while (temp != nullptr)
+	{
+		if (temp->data.teacherId == teacherId)
+		{
+			return temp->data;
+		}
+		temp = temp->next;
+	}
+	return nullptr;
+}
+
+
+Mark DataBase::getMarksByStudentId(unsigned long studentId)
+{
+	Node<Mark>* temp = getMarks().head;
+
+	while (temp != nullptr)
+	{
+		if (temp->data.studentId == studentId)
+		{
+			return temp->data;
+		}
+		temp = temp->next;
+	}
+	return nullptr;
+}
+
+
+Mark DataBase::getMarksById(unsigned long id)
+{
+	Node<Mark>* temp = getMarks().head;
+
+	while (temp != nullptr)
+	{
+		if (temp->data.id == id)
+		{
+			return temp->data;
+		}
+		temp = temp->next;
+	}
+	return nullptr;
+}
