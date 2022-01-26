@@ -129,7 +129,7 @@ int LinkedList<T>::getPositionOfElement(T element)
     
     if (head == nullptr)
     {
-        return 0;
+        return -1;
     }
     
     while (temp->data != element && temp->next != nullptr)
@@ -143,5 +143,5 @@ int LinkedList<T>::getPositionOfElement(T element)
         return position;
     }
     
-    return 0;
+    return -1;
 }
