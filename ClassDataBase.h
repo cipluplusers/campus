@@ -132,6 +132,13 @@ public:
 	Student getStudentByName(string name);
 	Student getStudentById(unsigned long id);
 	Student getStudentBySurname(string surname);
+
+	LearningProgram getLearningProgramById(unsigned long id);
+	LearningProgram getLearningProgramByTitle(string title);
+
+	Department getDepartmentByTitle(string title);
+	Department getDepartmentById(unsigned long id);
+
 };
 
 
