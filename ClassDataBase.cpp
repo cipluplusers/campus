@@ -135,10 +135,10 @@ LinkedList<Mark> DataBase::getMarksBySubjectId(unsigned long subjectId)
 {
 	Node<Mark>* temp = getMarks().head;
 
+	LinkedList<Mark> listMarks;
+
 	while (temp != nullptr)
 	{
-		LinkedList<Mark> listMarks;
-
 		if (temp->data.subjectId == subjectId)
 		{
 			listMarks.pushBack(temp->data);
@@ -154,10 +154,10 @@ LinkedList<Mark> DataBase::getMarksByTeacherId(unsigned long teacherId)
 {
 	Node<Mark>* temp = getMarks().head;
 
+	LinkedList<Mark> listMarks;
+
 	while (temp != nullptr)
 	{
-		LinkedList<Mark> listMarks;
-
 		if (temp->data.teacherId == teacherId)
 		{
 			listMarks.pushBack(temp->data);
@@ -173,10 +173,10 @@ LinkedList<Mark> DataBase::getMarksByStudentId(unsigned long studentId)
 {
 	Node<Mark>* temp = getMarks().head;
 
+	LinkedList<Mark> listMarks;
+
 	while (temp != nullptr)
 	{
-		LinkedList<Mark> listMarks;
-
 		if (temp->data.studentId == studentId)
 		{
 			listMarks.pushBack(temp->data);
@@ -188,7 +188,7 @@ LinkedList<Mark> DataBase::getMarksByStudentId(unsigned long studentId)
 }
 
 
-Mark DataBase::getMarkById(unsigned long id)
+LinkedList<Mark> DataBase::getMarkById(unsigned long id)
 {
 	Node<Mark>* temp = getMarks().head;
 
