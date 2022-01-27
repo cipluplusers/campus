@@ -19,5 +19,4 @@ public:
 
 	friend ostream& operator<< (ostream& out, Subject& subject);
 };
-
 #endif
