@@ -1,5 +1,5 @@
 #include "LinkedList.h"
-
+#include "ClassMark.h"
 #include "ClassDiary.h"
 #include <iostream>
 #include <string>
@@ -22,4 +22,17 @@ std::ostream& operator<< (std::ostream& out, Diary& diary)
 	return out;
 }
 */
+
+double Dairy::getAverageMark()
+{
+	Node<Mark>* temp = getMarks().head;
+	int mark = 0, amount = 0;
+	while (temp != nullptr)
+	{
+		amount++;
+		mark += temp->data;
+		temp = temp->next;
+	}
+	return mark / amount;
+}
 
