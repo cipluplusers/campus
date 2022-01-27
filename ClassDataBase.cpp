@@ -83,24 +83,6 @@ void DataBase::removeDiary(int position)
 }
 
 
-Diary DataBase::getDiaryByStudentId(unsigned long StudentId)
-{
-	getTeachers().deleteFromPosition(position);
-}
-
-
-void DataBase::addDiary(Diary obj)
-{
-	getDiaries().pushBack(obj);
-}
-
-
-void DataBase::removeDiary(int position)
-{
-	getDiaries().deleteFromPosition(position);
-}
-
-
 Diary DataBase::getDiaryByStudentId(unsigned long studentId)
 {
     Node<Diary>* temp = getDiaries().head;
