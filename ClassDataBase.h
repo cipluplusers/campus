@@ -128,19 +128,22 @@ public:
 	Subject getSubjectByCaption(string caption);
 	Subject getSubjectById(unsigned long id);
 	Subject getSubjectByCountOfCredits(unsigned long countOfCredits);
+
+	LinkedList<Mark> getMarksBySubjectId(unsigned long subjectId);
+	LinkedList<Mark> getMarksByTeacherId(unsigned long teacherId);
+	LinkedList<Mark> getMarksByStudentId(unsigned long studentId);
+	Mark getMarkById(unsigned long id);
+
 	Student getStudentByName(string name);
 	Student getStudentById(unsigned long id);
 	Student getStudentBySurname(string surname);
 
-
 	Student getStudentByName(string name);
 	Student getStudentById(unsigned long id);
 	Student getStudentBySurname(string surname);
-
 
 	LearningProgram getLearningProgramById(unsigned long id);
 	LearningProgram getLearningProgramByTitle(string title);
-
 
 	Department getDepartmentByTitle(string title);
 	Department getDepartmentById(unsigned long id);
