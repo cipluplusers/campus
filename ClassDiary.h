@@ -18,8 +18,6 @@ public:
     
     string toString();
 
-	double getAverageMark();
-
 	friend ostream& operator<< (ostream& out, Diary& diary);
 };
 
