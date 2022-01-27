@@ -5,14 +5,17 @@
 
 using namespace std;
 
+
 class Subject
 {
 public:
+    
 	string subjectCaption;
 	unsigned long subjectId;
 	unsigned long  subjectCountOfCredits;
 
 	string toString();
+  string serialize();
 
 	friend ostream& operator<< (ostream& out, Subject& subject);
 };

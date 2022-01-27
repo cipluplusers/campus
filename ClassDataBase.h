@@ -1,6 +1,5 @@
 #ifndef CLASSDATABASE
 #define CLASSDATABASE
-
 #include "ClassDataBase.h"
 #include "ClassDepartment.h"
 #include "ClassDiary.h"
@@ -14,9 +13,11 @@
 
 using namespace std;
 
+
 class DataBase
 {
 private:
+    
 	LinkedList<Student> students;
 	LinkedList<Teacher> teachers;
 	LinkedList<Mark> marks;
@@ -36,6 +37,7 @@ public:
 		students = valueStudents;
 	}
 
+    
 	LinkedList<Teacher> getTeachers()
 	{
 		return teachers; 
@@ -45,6 +47,7 @@ public:
 		teachers = valueTeachers;
 	}
   
+    
     LinkedList<Mark> getMarks()
 	{
 		return marks;
@@ -54,6 +57,7 @@ public:
 		marks = valueMarks;
 	}
 
+    
 	LinkedList<LearningProgram> getLearningPrograms()
 	{
 		return learningPrograms;
@@ -63,6 +67,7 @@ public:
 		learningPrograms = valueLearningPrograms;
 	}
 
+    
 	LinkedList<Department> getDepartments()
 	{
 		return departments;
@@ -72,6 +77,7 @@ public:
 		departments = valueDepartments;
 	}
   
+    
 	LinkedList<Diary> getDiaries()
 	{
 		return diaries;
@@ -81,6 +87,7 @@ public:
 		diaries = valueDiaries;
 	}
 
+    
 	LinkedList<Subject> getSubjects()
 	{
 		return subjects;
@@ -106,14 +113,37 @@ public:
 	Department addDepartment();
 	void removeDepartment();
     
-	Mark addMark();
-	void removeMark();
+	void addMark(Mark obj);
+	void removeMark(int position);
     
-	LearningProgram addLearningProgram();
-	void removeLearningProgram();
+	void addLearningProgram(LearningProgram lp);
+	void removeLearningProgram(unsigned long removeId);
     
-	Subject addSubject();
-	void removeSubject();
+	void addSubject(Subject element);
+	void removeSubject(int position);
+    
+    Diary getDiaryByStudentId(unsigned long StudentId);
+    Diary getDiaryById(unsigned long id);
+
+	Subject getSubjectByCaption(string caption);
+	Subject getSubjectById(unsigned long id);
+	Subject getSubjectByCountOfCredits(unsigned long countOfCredits);
+	Student getStudentByName(string name);
+	Student getStudentById(unsigned long id);
+	Student getStudentBySurname(string surname);
+
+
+	Student getStudentByName(string name);
+	Student getStudentById(unsigned long id);
+	Student getStudentBySurname(string surname);
+
+
+	LearningProgram getLearningProgramById(unsigned long id);
+	LearningProgram getLearningProgramByTitle(string title);
+
+
+	Department getDepartmentByTitle(string title);
+	Department getDepartmentById(unsigned long id);
 };
 
 

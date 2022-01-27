@@ -2,11 +2,14 @@
 #define CLASSTEACHER_H
 #include "ClassDate.h"
 
+
 using namespace std;
+
 
 class Teacher
 {
 public:
+    
     string name;
     string surname;
     string secondName;
@@ -16,9 +19,9 @@ public:
     unsigned long subjectId;
 
     string toString();
+    string serialize();
 
 	friend std::ostream& operator<< (std::ostream& out, Teacher& teacher);
-
 };
 
 #endif // CLASSTEACHER_H

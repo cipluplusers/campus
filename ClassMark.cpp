@@ -1,7 +1,7 @@
 #include "ClassMark.h"
-
 #include <iostream>
 #include <string>
+
 
 string Mark::toString()
 {
@@ -15,6 +15,15 @@ string Mark::toString()
 }
 
 
+string Mark::serialize()
+{
+    return  "|ID|" + to_string( id ) +
+            "|SubjectId|" + to_string( subjectId ) +
+            "|TeacherId|" + to_string( teacherId ) +
+            "|StudentId|" + to_string( studentId ) +
+            "|Value|" + to_string( value ) + "|";
+}
+
 
 std::ostream& operator<< (std::ostream& out, Mark& mark)
 {
@@ -22,3 +31,4 @@ std::ostream& operator<< (std::ostream& out, Mark& mark)
 
 	return out;
 }
+

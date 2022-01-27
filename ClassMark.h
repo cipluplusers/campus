@@ -16,6 +16,7 @@ public:
 	int value;
 
 	string toString();
+    string serialize();
   
 	friend ostream& operator<< (ostream& out, const Mark& mark);
 };
