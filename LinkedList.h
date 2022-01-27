@@ -18,6 +18,8 @@ public:
 
 
 template <class T>
+
+
 class LinkedList
 {
 public:
@@ -136,6 +138,5 @@ public:
         head = node;
     }
 };
-
 
 #endif

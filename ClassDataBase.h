@@ -48,7 +48,7 @@ public:
 	}
   
     
-    LinkedList<Mark> getMarks()
+	LinkedList<Mark> getMarks()
 	{
 		return marks;
 	}
@@ -101,16 +101,16 @@ public:
 	void loadDataBase();
 	void unloadDataBase();
     
-	Student addStudent();
+	void addStudent();
 	void removeStudent();
     
-	Teacher addTeacher();
+	void addTeacher();
 	void removeTeacher();
     
-	Diary addDiary();
+	void addDiary();
 	void removeDiary();
     
-	Department addDepartment();
+	void addDepartment();
 	void removeDepartment();
     
 	void addMark(Mark obj);
@@ -133,10 +133,6 @@ public:
 	LinkedList<Mark> getMarksByTeacherId(unsigned long teacherId);
 	LinkedList<Mark> getMarksByStudentId(unsigned long studentId);
 	Mark getMarkById(unsigned long id);
-
-	Student getStudentByName(string name);
-	Student getStudentById(unsigned long id);
-	Student getStudentBySurname(string surname);
 
 	Student getStudentByName(string name);
 	Student getStudentById(unsigned long id);
