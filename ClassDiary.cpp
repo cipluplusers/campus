@@ -26,7 +26,9 @@ std::ostream& operator<< (std::ostream& out, Diary& diary)
 double Dairy::getAverageMark()
 {
 	Node<Mark>* temp = getMarks().head;
+
 	int mark = 0, amount = 0;
+
 	while (temp != nullptr)
 	{
 		amount++;
