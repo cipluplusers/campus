@@ -22,26 +22,66 @@ void DataBase::removeMark(int position)
     getMarks().deleteFromPosition(position);
 }
 
-void DataBase::addLearningProgram(LearningProgram lp)
+
+void DataBase::addLearningProgram(LearningProgram obj)
 {
-  getLearningPrograms().pushBack(lp);
+  getLearningPrograms().pushBack(obj);
 }
 
-void DataBase::removeLearningProgram(unsigned long removeId)
+
+void DataBase::removeLearningProgram(int position)
 {
-  unsigned long position = removeId; 
   getLearningPrograms().deleteFromPosition(position);
 }
 
-void DataBase::addSubject(Subject element)
+
+void DataBase::addSubject(Subject obj)
 {
-    getSubjects().pushBack(element);
+    getSubjects().pushBack(obj);
 }
+
 
 void DataBase::removeSubject(int position)
 {
     getSubjects().deleteFromPosition(position);
 }
+
+
+void DataBase::addStudent(Student obj)
+{
+    getStudents().pushBack(obj);
+}
+
+
+void DataBase::removeStudent(int position)
+{
+    getStudents().deleteFromPosition(position);
+}
+
+
+void DataBase::addTeacher(Teacher obj)
+{
+    getTeachers().pushBack(obj);
+}
+
+
+void DataBase::removeTeacher(int position)
+{
+    getTeachers().deleteFromPosition(position);
+}
+
+
+void DataBase::addDiary(Diary obj)
+{
+    getDiaries().pushBack(obj);
+}
+
+
+void DataBase::removeDiary(int position)
+{
+    getDiaries().deleteFromPosition(position);
+}
+
 
 Diary DataBase::getDiaryByStudentId(unsigned long StudentId)
 {
@@ -125,6 +165,7 @@ Subject DataBase::getSubjectById(unsigned long id)
     }
     return nullptr;
 }
+
 
 Student DataBase::getStudentById(unsigned long id)
 {
