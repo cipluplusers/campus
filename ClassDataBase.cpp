@@ -25,13 +25,13 @@ void DataBase::removeMark(int position)
 
 void DataBase::addLearningProgram(LearningProgram obj)
 {
-  getLearningPrograms().pushBack(obj);
+    getLearningPrograms().pushBack(obj);
 }
 
 
 void DataBase::removeLearningProgram(int position)
 {
-  getLearningPrograms().deleteFromPosition(position);
+    getLearningPrograms().deleteFromPosition(position);
 }
 
 

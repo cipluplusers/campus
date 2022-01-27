@@ -103,22 +103,22 @@ public:
     
 	void addStudent(Student obj);
 	void removeStudent(int position);
-    
+
 	void addTeacher(Teacher obj);
 	void removeTeacher(int position);
-    
+
 	void addDiary(Diary obj);
 	void removeDiary(int position);
-    
+
 	void addDepartment();
 	void removeDepartment();
-    
+
 	void addMark(Mark obj);
 	void removeMark(int position);
-    
+
 	void addLearningProgram(LearningProgram obj);
 	void removeLearningProgram(int position);
-    
+
 	void addSubject(Subject obj);
 	void removeSubject(int position);
     
