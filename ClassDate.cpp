@@ -1,5 +1,7 @@
 #include <iostream>
+#include <string>
 #include "ClassDate.h"
+
 
 using namespace std;
 
@@ -12,9 +14,27 @@ Date::Date(int valueDay, int valueMonth, int valueYear)
 }
 
 
-void Date::PrintDate()
+void Date::printDate()
 {
     cout << "Date: " << day << "/" << month << "/"  << year << endl;
+}
+
+
+string Date::getString()
+{
+    string sday = to_string(day);
+    string smonth = to_string(month);
+    string syear = to_string(year);
+    string str = sday + "." + smonth + "." + syear;
+        return str;
+}
+
+
+string Date::serialize()
+{
+    return "|Day|" + to_string( getDay() ) +
+           "|Month|" + to_string( getMonth() ) +
+           "|Year|" + to_string( getYear() ) + "|";
 }
 
 
@@ -55,3 +75,11 @@ bool operator>(Date &d1, Date &d2)
     
     return !(d1 < d2);
 }
+
+
+ostream& operator<< (ostream& out, Date& date)
+{
+	out << date.getString() << endl;
+	return out;
+}
+

@@ -1,7 +1,10 @@
 #ifndef CLASSDATE_H
 #define CLASSDATE_H
+#include <string>
+
 
 using namespace std;
+
 
 class Date
 {
@@ -24,9 +27,15 @@ public:
     int getYear() { return year; }
     void setYear(int valueYear) { year = valueYear; }
     
-    void PrintDate();
+    void printDate();
+
+    string getString();
+    
+    string serialize();
   
+	friend std::ostream& operator<< (std::ostream& out, Date& date);
 };
+
 
 bool operator==(Date &d1, Date &d2);
 bool operator<(Date &d1, Date &d2);
