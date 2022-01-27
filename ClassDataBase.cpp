@@ -37,7 +37,7 @@ void DataBase::removeLearningProgram(int position)
 
 void DataBase::addSubject(Subject obj)
 {
-	getSubjects().pushBack(obj);
+    getSubjects().pushBack(obj);
 }
 
 
@@ -66,6 +66,24 @@ void DataBase::addTeacher(Teacher obj)
 
 
 void DataBase::removeTeacher(int position)
+{
+    getTeachers().deleteFromPosition(position);
+}
+
+
+void DataBase::addDiary(Diary obj)
+{
+    getDiaries().pushBack(obj);
+}
+
+
+void DataBase::removeDiary(int position)
+{
+    getDiaries().deleteFromPosition(position);
+}
+
+
+Diary DataBase::getDiaryByStudentId(unsigned long StudentId)
 {
 	getTeachers().deleteFromPosition(position);
 }

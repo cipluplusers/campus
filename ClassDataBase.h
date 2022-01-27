@@ -101,29 +101,29 @@ public:
 	void loadDataBase();
 	void unloadDataBase();
     
-	void addStudent();
-	void removeStudent();
-    
-	void addTeacher();
-	void removeTeacher();
-    
-	void addDiary();
-	void removeDiary();
-    
-	void addDepartment();
-	void removeDepartment();
-    
+	void addStudent(Student obj);
+	void removeStudent(int position);
+
+	void addTeacher(Teacher obj);
+	void removeTeacher(int position);
+
+	void addDiary(Diary obj);
+	void removeDiary(int position);
+
+	void addDepartment(Department obj);
+	void removeDepartment(int position);
+
 	void addMark(Mark obj);
 	void removeMark(int position);
-    
-	void addLearningProgram(LearningProgram lp);
-	void removeLearningProgram(unsigned long removeId);
-    
-	void addSubject(Subject element);
+
+	void addLearningProgram(LearningProgram obj);
+	void removeLearningProgram(int position);
+
+	void addSubject(Subject obj);
 	void removeSubject(int position);
     
-    Diary getDiaryByStudentId(unsigned long StudentId);
-    Diary getDiaryById(unsigned long id);
+  Diary getDiaryByStudentId(unsigned long StudentId);
+  Diary getDiaryById(unsigned long id);
 
 	Subject getSubjectByCaption(string caption);
 	Subject getSubjectById(unsigned long id);
@@ -145,6 +145,4 @@ public:
 	Department getDepartmentById(unsigned long id);
 };
 
-
 #endif // !CLASSDATEBASE
-
