@@ -133,15 +133,15 @@ LinkedList<Mark> DataBase::getMarksBySubjectId(unsigned long subjectId)
 
 	while (temp != nullptr)
 	{
+		LinkedList<Mark> listMarks;
+
 		if (temp->data.subjectId == subjectId)
 		{
-			return temp->data;
+			listMarks.pushBack(temp->data);
 		}
-
 		temp = temp->next;
 	}
-
-	return nullptr;
+	return listMarks;
 }
 
 
@@ -151,13 +151,15 @@ LinkedList<Mark> DataBase::getMarksByTeacherId(unsigned long teacherId)
 
 	while (temp != nullptr)
 	{
+		LinkedList<Mark> listMarks;
+
 		if (temp->data.teacherId == teacherId)
 		{
-			return temp->data;
+			listMarks.pushBack(temp->data);
 		}
 		temp = temp->next;
 	}
-	return nullptr;
+	return listMarks;
 }
 
 
@@ -167,13 +169,15 @@ LinkedList<Mark> DataBase::getMarksByStudentId(unsigned long studentId)
 
 	while (temp != nullptr)
 	{
+		LinkedList<Mark> listMarks;
+
 		if (temp->data.studentId == studentId)
 		{
-			return temp->data;
+			listMarks.pushBack(temp->data);
 		}
 		temp = temp->next;
 	}
-	return nullptr;
+	return listMarks;
 }
 
 
