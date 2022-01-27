@@ -126,6 +126,7 @@ Subject DataBase::getSubjectById(unsigned long id)
     return nullptr;
 }
 
+
 Student DataBase::getStudentById(unsigned long id)
 {
     Node<Student>* temp = getStudents().head;

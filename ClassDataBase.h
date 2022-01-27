@@ -128,6 +128,9 @@ public:
 	Subject getSubjectByCaption(string caption);
 	Subject getSubjectById(unsigned long id);
 	Subject getSubjectByCountOfCredits(unsigned long countOfCredits);
+	Student getStudentByName(string name);
+	Student getStudentById(unsigned long id);
+	Student getStudentBySurname(string surname);
 
 
 	Student getStudentByName(string name);
