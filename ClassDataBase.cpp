@@ -43,6 +43,7 @@ void DataBase::removeSubject(int position)
     getSubjects().deleteFromPosition(position);
 }
 
+
 Diary DataBase::getDiaryByStudentId(unsigned long StudentId)
 {
     Node<Diary> *temp = getDiaries().head;
@@ -56,7 +57,7 @@ Diary DataBase::getDiaryByStudentId(unsigned long StudentId)
         
         temp = temp->next;
     }
-    
+
     return nullptr;
 }
 
@@ -74,55 +75,58 @@ Diary DataBase::getDiaryById(unsigned long id)
         
         temp = temp->next;
     }
-    
+  
     return nullptr;
 }
 
 
 Subject DataBase::getSubjectByCaption(string caption)
 {
-    Node<Subject>* element = getSubjects().head;
+    Node<Subject> *temp = getSubjects().head;
 
-    while (element != nullptr)
+    while (temp != nullptr)
     {
-        if (element->data.subjectCaption == caption)
+        if (temp->data.subjectCaption == caption)
         {
-            return element->data;
+            return temp->data;
         }
-        element = element->next;
+		temp = temp->next;
     }
+
     return nullptr;
 }
 
 
 Subject DataBase::getSubjectByCountOfCredits(unsigned long countOfCredits)
 {
-    Node<Subject>* element = getSubjects().head;
+    Node<Subject> *temp = getSubjects().head;
 
-    while (element != nullptr)
+    while (temp != nullptr)
     {
-        if (element->data.subjectCountOfCredits == countOfCredits)
+        if (temp->data.subjectCountOfCredits == countOfCredits)
         {
-            return element->data;
+            return temp->data;
         }
-        element = element->next;
+		temp = temp->next;
     }
+
     return nullptr;
 }
 
 
 Subject DataBase::getSubjectById(unsigned long id)
 {
-    Node<Subject>* element = getSubjects().head;
+    Node<Subject> *temp = getSubjects().head;
 
-    while (element != nullptr)
+    while (temp != nullptr)
     {
-        if (element->data.subjectId == id)
+        if (temp->data.subjectId == id)
         {
-            return element->data;
+            return temp->data;
         }
-        element = element->next;
+		temp = temp->next;
     }
+
     return nullptr;
 }
 
@@ -141,6 +145,7 @@ LinkedList<Mark> DataBase::getMarksBySubjectId(unsigned long subjectId)
 		}
 		temp = temp->next;
 	}
+
 	return listMarks;
 }
 
@@ -159,6 +164,7 @@ LinkedList<Mark> DataBase::getMarksByTeacherId(unsigned long teacherId)
 		}
 		temp = temp->next;
 	}
+
 	return listMarks;
 }
 
@@ -177,6 +183,7 @@ LinkedList<Mark> DataBase::getMarksByStudentId(unsigned long studentId)
 		}
 		temp = temp->next;
 	}
+
 	return listMarks;
 }
 
@@ -193,5 +200,57 @@ Mark DataBase::getMarkById(unsigned long id)
 		}
 		temp = temp->next;
 	}
+
 	return nullptr;
+}
+
+
+Student DataBase::getStudentById(unsigned long id)
+{
+    Node<Student>* temp = getStudents().head;
+
+    while (temp != nullptr)
+    {
+        if (temp->data.studentId == id)
+        {
+            return temp->data;
+        }
+        temp = temp->next;
+    }
+
+    return nullptr;
+}
+
+
+Student DataBase::getStudentByName(string name)
+{
+    Node<Student>* temp = getStudents().head;
+
+    while (temp != nullptr)
+    {
+        if (temp->data.name == name)
+        {
+            return temp->data;
+        }
+        temp = temp->next;
+    }
+
+    return nullptr;
+}
+
+
+Student DataBase::getStudentBySurname(string surname)
+{
+    Node<Student>* temp = getStudents().head;
+
+    while (temp != nullptr)
+    {
+        if (temp->data.surname == surname)
+        {
+            return temp->data;
+        }
+        temp = temp->next;
+    }
+
+    return nullptr;
 }
