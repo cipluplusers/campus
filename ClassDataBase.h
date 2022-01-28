@@ -48,7 +48,7 @@ public:
 	}
   
     
-    LinkedList<Mark> getMarks()
+	LinkedList<Mark> getMarks()
 	{
 		return marks;
 	}
@@ -110,8 +110,8 @@ public:
 	void addDiary(Diary obj);
 	void removeDiary(int position);
 
-	void addDepartment();
-	void removeDepartment();
+	void addDepartment(Department obj);
+	void removeDepartment(int position);
 
 	void addMark(Mark obj);
 	void removeMark(int position);
@@ -122,30 +122,27 @@ public:
 	void addSubject(Subject obj);
 	void removeSubject(int position);
     
-    Diary getDiaryByStudentId(unsigned long StudentId);
-    Diary getDiaryById(unsigned long id);
+        Diary getDiaryByStudentId(unsigned long StudentId);
+        Diary getDiaryById(unsigned long id);
 
 	Subject getSubjectByCaption(string caption);
 	Subject getSubjectById(unsigned long id);
 	Subject getSubjectByCountOfCredits(unsigned long countOfCredits);
+
+	LinkedList<Mark> getMarksBySubjectId(unsigned long subjectId);
+	LinkedList<Mark> getMarksByTeacherId(unsigned long teacherId);
+	LinkedList<Mark> getMarksByStudentId(unsigned long studentId);
+	Mark getMarkById(unsigned long id);
+
 	Student getStudentByName(string name);
 	Student getStudentById(unsigned long id);
 	Student getStudentBySurname(string surname);
-
-
-	Student getStudentByName(string name);
-	Student getStudentById(unsigned long id);
-	Student getStudentBySurname(string surname);
-
 
 	LearningProgram getLearningProgramById(unsigned long id);
 	LearningProgram getLearningProgramByTitle(string title);
-
 
 	Department getDepartmentByTitle(string title);
 	Department getDepartmentById(unsigned long id);
 };
 
-
 #endif // !CLASSDATEBASE
-
