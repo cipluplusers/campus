@@ -137,6 +137,34 @@ public:
 
         head = node;
     }
+<<<<<<< HEAD
+    
+    
+    int getPositionOfElement(T element)
+    {
+        Node<T>* temp = head;
+        
+        int position = 0;
+        
+        if (head == nullptr)
+        {
+            return -1;
+        }
+        
+        while (temp->data != element && temp->next != nullptr)
+        {
+            temp = temp->next;
+            position ++;
+        }
+        
+        if (temp->data == element)
+        {
+            return position;
+        }
+        
+        return -1;
+=======
+>>>>>>> main
 };
 
 #endif
