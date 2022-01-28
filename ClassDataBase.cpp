@@ -9,6 +9,7 @@
 #include "LinkedList.h"
 #include <iostream>
 #include <string>
+#include <fstream>
 
 
 void DataBase::addMark(Mark obj)
@@ -167,13 +168,32 @@ Subject DataBase::getSubjectById(unsigned long id)
 }
 
 
+string DataBase::loadSubject(string fileName)
+{
+    ifstream fin(fileName);
+    string data;
+    getline(fin, data);
+    fin.close();
+    return data;
+}
+
+
+void DataBase::unloadSubject(string fileName)
+{
+    ofstream fout(fileName);
+    string data = getSubjects().head->data.serialize();
+    fout << data;
+    fout.close();
+    return;
+}
+
 Student DataBase::getStudentById(unsigned long id)
 {
     Node<Student>* temp = getStudents().head;
 
     while (temp != nullptr)
     {
-        if (temp->data.studentId == id)
+        if (temp->data.id == id)
         {
             return temp->data;
         }

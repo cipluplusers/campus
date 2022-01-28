@@ -121,6 +121,8 @@ public:
 
 	void addSubject(Subject obj);
 	void removeSubject(int position);
+	string loadSubject(string fileName);
+	void unloadSubject(string fileName);
     
     Diary getDiaryByStudentId(unsigned long StudentId);
     Diary getDiaryById(unsigned long id);
@@ -128,6 +130,7 @@ public:
 	Subject getSubjectByCaption(string caption);
 	Subject getSubjectById(unsigned long id);
 	Subject getSubjectByCountOfCredits(unsigned long countOfCredits);
+
 	Student getStudentByName(string name);
 	Student getStudentById(unsigned long id);
 	Student getStudentBySurname(string surname);
