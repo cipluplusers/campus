@@ -101,25 +101,25 @@ public:
 	void loadDataBase();
 	void unloadDataBase();
     
-	Student addStudent();
-	void removeStudent();
-    
-	Teacher addTeacher();
-	void removeTeacher();
-    
-	Diary addDiary();
-	void removeDiary();
-    
-	Department addDepartment();
+	void addStudent(Student obj);
+	void removeStudent(int position);
+
+	void addTeacher(Teacher obj);
+	void removeTeacher(int position);
+
+	void addDiary(Diary obj);
+	void removeDiary(int position);
+
+	void addDepartment();
 	void removeDepartment();
-    
+
 	void addMark(Mark obj);
 	void removeMark(int position);
-    
-	void addLearningProgram(LearningProgram lp);
-	void removeLearningProgram(unsigned long removeId);
-    
-	void addSubject(Subject element);
+
+	void addLearningProgram(LearningProgram obj);
+	void removeLearningProgram(int position);
+
+	void addSubject(Subject obj);
 	void removeSubject(int position);
     
     Diary getDiaryByStudentId(unsigned long StudentId);
