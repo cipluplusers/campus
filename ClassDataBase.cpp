@@ -82,6 +82,16 @@ void DataBase::removeDiary(int position)
     getDiaries().deleteFromPosition(position);
 }
 
+void DataBase::addDepartment(Diary obj)
+{
+    getDepartments().pushBack(obj);
+}
+
+
+void DataBase::removeDepartment(int position)
+{
+    getDepartments().deleteFromPosition(position);
+}
 
 Diary DataBase::getDiaryByStudentId(unsigned long studentId)
 {
@@ -343,6 +353,45 @@ Department DataBase::getDepartmentById(unsigned long id)
         {
             return temp->data;
         }
+        temp = temp->next;
+    }
+    return nullptr;
+}
+
+Teacher DataBase::getTeacherById(unsigned long id)
+{
+    Node<Department>* temp = getTeachers().head;
+
+    while (temp != nullptr)
+    {
+        if (temp->data.id == id)
+            return temp->data;
+        temp = temp->next;
+    }
+    return nullptr;
+}
+
+Teacher DataBase::getTeacherByName(string name)
+{
+    Node<Department>* temp = getTeachers().head;
+
+    while (temp != nullptr)
+    {
+        if (temp->data.name == name)
+            return temp->data;
+        temp = temp->next;
+    }
+    return nullptr;
+}
+
+Teacher DataBase::getTeacherBySurname(string surname)
+{
+    Node<Department>* temp = getTeachers().head;
+
+    while (temp != nullptr)
+    {
+        if (temp->data.surname == surname)
+            return temp->data;
         temp = temp->next;
     }
     return nullptr;
