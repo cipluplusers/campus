@@ -17,6 +17,18 @@ string Department::serialize()
 }
 
 
+Department Department::deserialize(string str)
+{
+    string arr[4];
+    
+    unsigned long id = stoul(arr[3], nullptr, 10);
+    
+    Department object = {arr[1], id};
+    
+    return object;
+}
+
+
 std::ostream& operator<< (std::ostream& out, Department& department)
 {
 	out << department.toString() << endl;
