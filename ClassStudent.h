@@ -23,6 +23,7 @@ public:
 
     string toString();
     string serialize();
+    Student deserialize(string str);
 
 	friend std::ostream& operator<< (std::ostream& out, const Student& student);
 };
