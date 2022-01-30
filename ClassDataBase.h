@@ -121,7 +121,7 @@ public:
 
 	void addSubject(Subject obj);
 	void removeSubject(int position);
-	string loadSubject(string fileName);
+	void loadSubject(string fileName);
 	void unloadSubject(string fileName);
     
     Diary getDiaryByStudentId(unsigned long StudentId);
