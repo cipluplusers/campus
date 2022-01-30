@@ -9,77 +9,87 @@
 #include "LinkedList.h"
 #include <iostream>
 #include <string>
-#include <fstream>
 
 
 void DataBase::addMark(Mark obj)
 {
-    getMarks().pushBack(obj);
+	getMarks().pushBack(obj);
 }
 
 
 void DataBase::removeMark(int position)
 {
-    getMarks().deleteFromPosition(position);
+	getMarks().deleteFromPosition(position);
 }
 
 
-void DataBase::addLearningProgram(LearningProgram lp)
+void DataBase::addLearningProgram(LearningProgram obj)
 {
-  getLearningPrograms().pushBack(lp);
-}
-
-
-void DataBase::removeLearningProgram(unsigned long removeId)
-{
-  unsigned long position = removeId; 
-  getLearningPrograms().deleteFromPosition(position);
-}
-
-
-void DataBase::addSubject(Subject element)
-{
-    getSubjects().pushBack(element);
-}
-
-
-void DataBase::removeSubject(int position)
-{
-    getSubjects().deleteFromPosition(position);
-}
-
-
-void DataBase::addLearningProgram(LearningProgram lp)
-{
-  getLearningPrograms().pushBack(lp);
+	getLearningPrograms().pushBack(obj);
 }
 
 
 void DataBase::removeLearningProgram(int position)
 {
-  getLearningPrograms().deleteFromPosition(position);
+	getLearningPrograms().deleteFromPosition(position);
 }
 
 
-void DataBase::addSubject(Subject element)
+void DataBase::addSubject(Subject obj)
 {
-    getSubjects().pushBack(element);
+    getSubjects().pushBack(obj);
 }
 
 
 void DataBase::removeSubject(int position)
 {
-    getSubjects().deleteFromPosition(position);
+	getSubjects().deleteFromPosition(position);
 }
 
 
-Diary DataBase::getDiaryByStudentId(unsigned long StudentId)
+void DataBase::addStudent(Student obj)
 {
-    Node<Diary> *temp = getDiaries().head;
+	getStudents().pushBack(obj);
+}
+
+
+void DataBase::removeStudent(int position)
+{
+	getStudents().deleteFromPosition(position);
+}
+
+
+void DataBase::addTeacher(Teacher obj)
+{
+	getTeachers().pushBack(obj);
+}
+
+
+void DataBase::removeTeacher(int position)
+{
+    getTeachers().deleteFromPosition(position);
+}
+
+
+void DataBase::addDiary(Diary obj)
+{
+    getDiaries().pushBack(obj);
+}
+
+
+void DataBase::removeDiary(int position)
+{
+    getDiaries().deleteFromPosition(position);
+}
+
+
+Diary DataBase::getDiaryByStudentId(unsigned long studentId)
+{
+    Node<Diary>* temp = getDiaries().head;
     
     while( temp != nullptr )
     {
-        if ( temp->data.studentId == StudentId )
+        if ( temp->data.studentId == studentId )
         {
             return temp->data;
         }
@@ -93,7 +103,7 @@ Diary DataBase::getDiaryByStudentId(unsigned long StudentId)
 
 Diary DataBase::getDiaryById(unsigned long id)
 {
-    Node<Diary> *temp = getDiaries().head;
+    Node<Diary>* temp = getDiaries().head;
     
     while( temp != nullptr )
     {
@@ -111,107 +121,229 @@ Diary DataBase::getDiaryById(unsigned long id)
 
 Subject DataBase::getSubjectByCaption(string caption)
 {
-    Node<Subject>* element = getSubjects().head;
+    Node<Subject>* temp = getSubjects().head;
 
-    while (element != nullptr)
+    while (temp != nullptr)
     {
-        if (element->data.subjectCaption == caption)
+        if (temp->data.subjectCaption == caption)
         {
-            return element->data;
+            return temp->data;
         }
-        element = element->next;
+		temp = temp->next;
     }
-  
     return nullptr;
 }
 
 
 Subject DataBase::getSubjectByCountOfCredits(unsigned long countOfCredits)
 {
-    Node<Subject>* element = getSubjects().head;
+    Node<Subject>* temp = getSubjects().head;
 
-    while (element != nullptr)
+    while (temp != nullptr)
     {
-        if (element->data.subjectCountOfCredits == countOfCredits)
+        if (temp->data.subjectCountOfCredits == countOfCredits)
         {
-            return element->data;
+            return temp->data;
         }
-        element = element->next;
+		temp = temp->next;
     }
-
     return nullptr;
 }
 
 
 Subject DataBase::getSubjectById(unsigned long id)
 {
-    Node<Subject>* element = getSubjects().head;
+    Node<Subject>* temp = getSubjects().head;
 
-    while (element != nullptr)
+    while (temp != nullptr)
     {
-        if (element->data.subjectId == id)
+        if (temp->data.subjectId == id)
         {
-            return element->data;
+            return temp->data;
         }
-        element = element->next;
+		temp = temp->next;
     }
-  
     return nullptr;
 }
 
 
-string DataBase::loadDepartments()
+LinkedList<Mark> DataBase::getMarksBySubjectId(unsigned long subjectId)
 {
-    string path = "Departments.txt";
-    string str = "";
-    ifstream fin;
-    
-    fin.open(path);
-    
-    if ( !fin.is_open() )
-    {
-        cout << "File wasn't open" << endl;
-    }
-    else
-    {
-        string temp;
-        while ( getline(fin, temp) )
-        {
-            str += temp;
-        }
-    }
-    
-    fin.close();
-    
-    return str;
+	Node<Mark>* temp = getMarks().head;
+
+	LinkedList<Mark> listMarks;
+
+	while (temp != nullptr)
+	{
+		if (temp->data.subjectId == subjectId)
+		{
+			listMarks.pushBack(temp->data);
+		}
+		temp = temp->next;
+	}
+	return listMarks;
 }
 
 
-void DataBase::unloadDepartments()
+LinkedList<Mark> DataBase::getMarksByTeacherId(unsigned long teacherId)
 {
-    string path = "Departments.txt";
-    ofstream fout;
-    
-    fout.open(path);
-    
-    if ( !fout.is_open() )
+	Node<Mark>* temp = getMarks().head;
+
+	LinkedList<Mark> listMarks;
+
+	while (temp != nullptr)
+	{
+		if (temp->data.teacherId == teacherId)
+		{
+			listMarks.pushBack(temp->data);
+		}
+		temp = temp->next;
+	}
+	return listMarks;
+}
+
+
+LinkedList<Mark> DataBase::getMarksByStudentId(unsigned long studentId)
+{
+	Node<Mark>* temp = getMarks().head;
+
+	LinkedList<Mark> listMarks;
+
+	while (temp != nullptr)
+	{
+		if (temp->data.studentId == studentId)
+		{
+			listMarks.pushBack(temp->data);
+		}
+		temp = temp->next;
+	}
+	return listMarks;
+}
+
+
+Mark DataBase::getMarkById(unsigned long id)
+{
+	Node<Mark>* temp = getMarks().head;
+
+	while (temp != nullptr)
+	{
+		if (temp->data.id == id)
+		{
+			return temp->data;
+		}
+		temp = temp->next;
+	}
+	return nullptr;
+}
+
+
+Student DataBase::getStudentById(unsigned long id)
+{
+    Node<Student>* temp = getStudents().head;
+
+    while (temp != nullptr)
     {
-        cout << "File wasn't open" << endl;
-    }
-    else
-    {
-        string str = "";
-        
-        Node<Department> *temp = getDepartments().head;
-        while ( temp != nullptr )
+        if (temp->data.studentId == id)
         {
-            string tempStr = "";
-            tempStr = temp->data.serialize();
-            str += tempStr;
-            temp = temp->next;
+            return temp->data;
         }
-        fout << str;
+        temp = temp->next;
     }
-    
-    fout.close();
+    return nullptr;
+}
+
+
+Student DataBase::getStudentByName(string name)
+{
+    Node<Student>* temp = getStudents().head;
+
+    while (temp != nullptr)
+    {
+        if (temp->data.name == name)
+        {
+            return temp->data;
+        }
+        temp = temp->next;
+    }
+    return nullptr;
+}
+
+
+Student DataBase::getStudentBySurname(string surname)
+{
+    Node<Student>* temp = getStudents().head;
+
+    while (temp != nullptr)
+    {
+        if (temp->data.surname == surname)
+        {
+            return temp->data;
+        }
+        temp = temp->next;
+    }
+    return nullptr;
+}
+
+
+LearningProgram DataBase::getLearningProgramById(unsigned long id)
+{
+    Node<LearningProgram>* temp = getLearningPrograms().head;
+
+    while (temp != nullptr)
+    {
+        if (temp->data.id == id)
+        {
+            return temp->data;
+        }
+        temp = temp->next;
+    }
+    return nullptr;
+}
+
+
+LearningProgram DataBase::getLearningProgramByTitle(string title)
+{
+    Node<LearningProgram>* temp = getLearningPrograms().head;
+
+    while (temp != nullptr)
+    {
+        if (temp->data.title == title)
+        {
+            return temp->data;
+        }
+        temp = temp->next;
+    }
+    return nullptr;
+}
+
+
+Department DataBase::getDepartmentByTitle(string title)
+{
+    Node<Department>* temp = getDepartments().head;
+
+    while (temp != nullptr)
+    {
+        if (temp->data.title == title)
+        {
+            return temp->data;
+        }
+        temp = temp->next;
+    }
+    return nullptr;
+}
+
+
+Department DataBase::getDepartmentById(unsigned long id)
+{
+    Node<Department>* temp = getDepartments().head;
+
+    while (temp != nullptr)
+    {
+        if (temp->data.id == id)
+        {
+            return temp->data;
+        }
+        temp = temp->next;
+    }
+    return nullptr;
 }
