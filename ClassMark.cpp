@@ -25,6 +25,21 @@ string Mark::serialize()
 }
 
 
+Mark Mark::deserialize(string str)
+{
+    string arr[10];
+    
+    unsigned long id = stoul(arr[1], nullptr, 10);
+    unsigned long subjectId = stoul(arr[3], nullptr, 10);
+    unsigned long teacherId = stoul(arr[5], nullptr, 10);
+    unsigned long studentId = stoul(arr[7], nullptr, 10);
+    
+    Mark object = {id, subjectId, teacherId, studentId, arr[9]};
+    
+    return object;
+}
+
+
 std::ostream& operator<< (std::ostream& out, Mark& mark)
 {
 	out << mark.toString() << endl;
