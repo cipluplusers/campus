@@ -1,6 +1,5 @@
 #include <iostream>
 #include <string>
-
 #include <cstdlib>
 #include "ClassTeacher.h"
 #include "ClassDate.h"
