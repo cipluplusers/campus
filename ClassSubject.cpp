@@ -28,3 +28,20 @@ string Subject::serialize()
             "|SubjectCountOfCredits|" + to_string( subjectCountOfCredits ) + "|";
 }
 
+
+Subject Subject::deserialize(string str)
+{
+    string arr[6];
+    for (int i = 0; i < 6; i++)
+    {
+        getline(cin, str, '|');
+        arr[i] = str;
+    }
+    
+    unsigned long subjectId = stoul(arr[3], nullptr, 10);
+    unsigned long subjectCountOfCredits = stoul(arr[5], nullptr, 10);
+    
+    Subject object = {arr[1], subjectId, subjectCountOfCredits};
+    
+    return object;
+}
