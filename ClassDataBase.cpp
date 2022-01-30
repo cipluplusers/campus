@@ -170,46 +170,21 @@ Subject DataBase::getSubjectById(unsigned long id)
 }
 
 
-void DataBase::loadSubject(string fileName)
+string DataBase::loadSubject(string fileName)
 {
     ifstream fin(fileName);
     string data;
     getline(fin, data);
-    char delim = '|';
-    Node<Subject>* head = getSubjects().head;
-    while (getline(fin, data))
-    {
-        vector<string> arr;
-        while (getline(fin, data, delim))
-        {
-            arr.push_back(data);
-        }
-
-        unsigned long countOfCredits, id;
-        stringstream arr3(arr[3]);
-        arr3 >> id;
-        stringstream arr5(arr[5]);
-        arr5 >> countOfCredits;
-
-        head->data.subjectCaption = arr[1];
-        head->data.subjectCountOfCredits = countOfCredits;
-        head->data.subjectId = id;
-
-        head = head->next;
-    }
+    fin.close();
+    return data;
 }
 
 
 void DataBase::unloadSubject(string fileName)
 {
     ofstream fout(fileName);
-    Node<Subject>* head = getSubjects().head;
-    while (head != nullptr)
-    {
-        string data = head->data.serialize();
-        fout << data;
-        head = head->next;
-    }
+    string data = getSubjects().head->data.serialize();
+    fout << data;
     fout.close();
     return;
 }
