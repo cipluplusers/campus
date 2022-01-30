@@ -32,6 +32,8 @@ public:
     string getString();
     
     string serialize();
+    
+    Date deserialize(string str);
   
 	friend std::ostream& operator<< (std::ostream& out, Date& date);
 };
