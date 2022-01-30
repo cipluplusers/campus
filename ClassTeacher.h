@@ -20,6 +20,7 @@ public:
 
     string toString();
     string serialize();
+    Teacher deserialize(string str);
 
 	friend std::ostream& operator<< (std::ostream& out, Teacher& teacher);
 };
