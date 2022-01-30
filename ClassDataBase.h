@@ -11,7 +11,7 @@
 #include "LinkedList.h"
 
 
-using namespace std;
+//using namespace std;
 
 
 class DataBase
@@ -122,8 +122,8 @@ public:
 	void addSubject(Subject obj);
 	void removeSubject(int position);
     
-        Diary getDiaryByStudentId(unsigned long StudentId);
-        Diary getDiaryById(unsigned long id);
+    Diary getDiaryByStudentId(unsigned long StudentId);
+    Diary getDiaryById(unsigned long id);
 
 	Subject getSubjectByCaption(string caption);
 	Subject getSubjectById(unsigned long id);

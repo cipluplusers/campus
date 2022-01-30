@@ -243,7 +243,7 @@ Student DataBase::getStudentById(unsigned long id)
 
     while (temp != nullptr)
     {
-        if (temp->data.studentId == id)
+        if (temp->data.id == id)
         {
             return temp->data;
         }
