@@ -38,6 +38,28 @@ string Date::serialize()
 }
 
 
+Date Date::deserialize(string str)
+{
+    string arr[6];
+    
+    for (int i = 0; i < 6; i++)
+    {
+        getline(cin, str, '|');
+        arr[i] = str;
+    }
+    
+    int day = stoi(arr[1]);
+    int month = stoi(arr[3]);
+    int year = stoi(arr[5]);
+    
+    
+    Date object = {day, month, year};
+    
+    return object;
+}
+
+
+
 bool operator==(Date &d1, Date &d2)
 {
     return ( d1.getDay() == d2.getDay() &&
