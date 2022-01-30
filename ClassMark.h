@@ -17,6 +17,7 @@ public:
 
 	string toString();
     string serialize();
+    Teacher deserialize(string str);
   
 	friend ostream& operator<< (ostream& out, const Mark& mark);
 };
