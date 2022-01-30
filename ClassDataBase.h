@@ -124,8 +124,8 @@ public:
 	void loadSubject(string fileName);
 	void unloadSubject(string fileName);
     
-        Diary getDiaryByStudentId(unsigned long StudentId);
-        Diary getDiaryById(unsigned long id);
+    Diary getDiaryByStudentId(unsigned long StudentId);
+    Diary getDiaryById(unsigned long id);
 
 	Subject getSubjectByCaption(string caption);
 	Subject getSubjectById(unsigned long id);
