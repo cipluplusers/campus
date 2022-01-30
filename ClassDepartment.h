@@ -15,6 +15,8 @@ public:
 
 	string toString();
     string serialize();
+    Department deserialize(string str);
+
     
 	friend std::ostream& operator<< (std::ostream& out, Department& department);
 };
