@@ -5,6 +5,9 @@
 #include "ClassMark.h"
 
 
+using namespace std;
+
+
 class Diary
 {
 public:

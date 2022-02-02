@@ -5,6 +5,9 @@
 #include "ClassSubject.h"
 
 
+using namespace std;
+
+
 class LearningProgram
 {
 public:

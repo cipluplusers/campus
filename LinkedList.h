@@ -63,6 +63,7 @@ public:
         if (head == nullptr)
         {
             cout << "\nList is empty\n\n";
+            //return 0;
         }
 
         if (head == head->next)
@@ -136,7 +137,7 @@ public:
 
         head = node;
     }
-
+<<<<<<< HEAD
     
     
     int getPositionOfElement(T element)
@@ -162,7 +163,8 @@ public:
         }
         
         return -1;
-    }
+=======
+>>>>>>> main
 };
 
 #endif
