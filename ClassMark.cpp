@@ -27,14 +27,21 @@ string Mark::serialize()
 
 Mark Mark::deserialize(string str)
 {
-    string arr[10];
+    string marks[10];
     
-    unsigned long id = stoul(arr[1], nullptr, 10);
-    unsigned long subjectId = stoul(arr[3], nullptr, 10);
-    unsigned long teacherId = stoul(arr[5], nullptr, 10);
-    unsigned long studentId = stoul(arr[7], nullptr, 10);
+    for (int i = 0; i < 10; i++)
+    {
+        getline(cin, str, '|');
+        marks[i] = str;
+    }
     
-    Mark object = {id, subjectId, teacherId, studentId, arr[9]};
+    unsigned long id = stoul(marks[1], nullptr, 10);
+    unsigned long subjectId = stoul(marks[3], nullptr, 10);
+    unsigned long teacherId = stoul(marks[5], nullptr, 10);
+    unsigned long studentId = stoul(marks[7], nullptr, 10);
+    int value = stoi(marks[9]);
+    
+    Mark object = {id, subjectId, teacherId, studentId, value};
     
     return object;
 }

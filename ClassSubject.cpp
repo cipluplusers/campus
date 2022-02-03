@@ -31,17 +31,18 @@ string Subject::serialize()
 
 Subject Subject::deserialize(string str)
 {
-    string arr[6];
+    string subjects[6];
+    
     for (int i = 0; i < 6; i++)
     {
         getline(cin, str, '|');
-        arr[i] = str;
+        subjects[i] = str;
     }
     
-    unsigned long subjectId = stoul(arr[3], nullptr, 10);
-    unsigned long subjectCountOfCredits = stoul(arr[5], nullptr, 10);
+    unsigned long subjectId = stoul(subjects[3], nullptr, 10);
+    unsigned long subjectCountOfCredits = stoul(subjects[5], nullptr, 10);
     
-    Subject object = {arr[1], subjectId, subjectCountOfCredits};
+    Subject object = {subjects[1], subjectId, subjectCountOfCredits};
     
     return object;
 }

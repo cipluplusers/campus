@@ -34,29 +34,29 @@ string Teacher::serialize()
 
 Teacher Teacher::deserialize(string str)
 {
-    string arr[14];
-    string arr1[3];
+    string teachers[14];
+    string helpArr1[3];
     for (int i = 0; i < 14; i++)
     {
         getline(cin, str, '|');
-        arr[i] = str;
+        teachers[i] = str;
     }
     
     for (int j = 0; j < 3; j++)
     {
-        getline(cin, arr[7], '.');
-        arr1[j] = arr[7];
+        getline(cin, teachers[7], '.');
+        helpArr1[j] = teachers[7];
     }
     
-    int day = stoi(arr1[0]);
-    int month = stoi(arr1[1]);
-    int year = stoi(arr1[2]);
+    int day = stoi(helpArr1[0]);
+    int month = stoi(helpArr1[1]);
+    int year = stoi(helpArr1[2]);
     
-    unsigned long id = stoul(arr[9], nullptr, 10);
-    unsigned long departmentId = stoul(arr[11], nullptr, 10);
-    unsigned long subjectId = stoul(arr[13], nullptr, 10);
+    unsigned long id = stoul(teachers[9], nullptr, 10);
+    unsigned long departmentId = stoul(teachers[11], nullptr, 10);
+    unsigned long subjectId = stoul(teachers[13], nullptr, 10);
     
-    Teacher object = {arr[1], arr[3], arr[5], {day, month, year}, id, departmentId, subjectId};
+    Teacher object = {teachers[1], teachers[3], teachers[5], {day, month, year}, id, departmentId, subjectId};
     
     return object;
 }

@@ -135,7 +135,6 @@ public:
 
         head = node;
     }
-<<<<<<< HEAD
     
     
     int getPositionOfElement(T element)
@@ -161,8 +160,6 @@ public:
         }
         
         return -1;
-=======
->>>>>>> main
 };
 
 
