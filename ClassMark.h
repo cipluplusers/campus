@@ -6,7 +6,8 @@
 using namespace std;
 
 
-class Mark {
+class Mark 
+{
 public:
 
 	unsigned long id;
@@ -21,6 +22,5 @@ public:
   
 	friend ostream& operator<< (ostream& out, const Mark& mark);
 };
-
 
 #endif

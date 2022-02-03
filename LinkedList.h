@@ -18,6 +18,8 @@ public:
 
 
 template <class T>
+
+
 class LinkedList
 {
 public:
@@ -161,6 +163,5 @@ public:
         
         return -1;
 };
-
 
 #endif

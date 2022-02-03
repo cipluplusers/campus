@@ -21,4 +21,4 @@ public:
 	friend std::ostream& operator<< (std::ostream& out, Department& department);
 };
 
-#endif // CLASSDEPARTMENT_Hdfghjk
+#endif // CLASSDEPARTMENT_H
