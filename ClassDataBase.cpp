@@ -9,6 +9,7 @@
 #include "LinkedList.h"
 #include <iostream>
 #include <string>
+#include <fstream>
 
 
 void DataBase::addMark(Mark obj)
@@ -243,7 +244,7 @@ Student DataBase::getStudentById(unsigned long id)
 
     while (temp != nullptr)
     {
-        if (temp->data.studentId == id)
+        if (temp->data.id == id)
         {
             return temp->data;
         }
@@ -346,4 +347,62 @@ Department DataBase::getDepartmentById(unsigned long id)
         temp = temp->next;
     }
     return nullptr;
+}
+
+
+void DataBase::loadDepartments()
+{
+    string path = "Departments.txt";
+    string str = "";
+    ifstream fin;
+    fin.open(path);
+    
+    if ( !fin.is_open() )
+    {
+        cout << "File wasn't open" << endl;
+    }
+    else
+    {
+        string temp;
+        while ( getline(fin, temp) )
+        {
+            str += temp;
+        }
+    }
+    
+    fin.close();
+    
+    Department tempDepartment;
+    getDepartments().pushBack( tempDepartment.deserialize(str) );
+}
+
+
+void DataBase::unloadDepartments()
+{
+    string path = "Departments.txt";
+    ofstream fout;
+
+    fout.open(path);
+    
+    if ( !fout.is_open() )
+    {
+        cout << "File wasn't open" << endl;
+    }
+    else
+    {
+        string str = "";
+
+        Node<Department> *temp = getDepartments().head;
+        while ( temp != nullptr )
+        {
+            string tempStr = "";
+            tempStr = temp->data.serialize();
+            str = str + tempStr;
+            temp = temp->next;
+        }
+        
+        fout << str;
+    }
+    
+    fout.close();
 }
