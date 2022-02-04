@@ -144,8 +144,8 @@ public:
 	Department getDepartmentByTitle(string title);
 	Department getDepartmentById(unsigned long id);
     
-    void loadDepartments();
-    void unloadDepartments();
+    bool loadDepartments();
+    bool unloadDepartments();
 };
 
 #endif // !CLASSDATEBASE

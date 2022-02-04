@@ -10,6 +10,7 @@
 #include <iostream>
 #include <string>
 #include <fstream>
+#include "GlobalConstants.h"
 
 
 void DataBase::addMark(Mark obj)
@@ -350,16 +351,15 @@ Department DataBase::getDepartmentById(unsigned long id)
 }
 
 
-void DataBase::loadDepartments()
+bool DataBase::loadDepartments()
 {
-    string path = "Departments.txt";
     string str = "";
     ifstream fin;
     fin.open(path);
     
     if ( !fin.is_open() )
     {
-        cout << "File wasn't open" << endl;
+        return false;
     }
     else
     {
@@ -374,19 +374,20 @@ void DataBase::loadDepartments()
     
     Department tempDepartment;
     getDepartments().pushBack( tempDepartment.deserialize(str) );
+    
+    return true;
 }
 
 
-void DataBase::unloadDepartments()
+bool DataBase::unloadDepartments()
 {
-    string path = "Departments.txt";
     ofstream fout;
 
     fout.open(path);
     
     if ( !fout.is_open() )
     {
-        cout << "File wasn't open" << endl;
+        return false;
     }
     else
     {
@@ -405,4 +406,6 @@ void DataBase::unloadDepartments()
     }
     
     fout.close();
+    
+    return true;
 }
