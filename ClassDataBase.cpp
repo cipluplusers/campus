@@ -9,6 +9,8 @@
 #include "LinkedList.h"
 #include <iostream>
 #include <string>
+#include <fstream>
+#include "GlobalConstants.h"
 
 
 void DataBase::addMark(Mark obj)
@@ -80,6 +82,18 @@ void DataBase::addDiary(Diary obj)
 void DataBase::removeDiary(int position)
 {
     getDiaries().deleteFromPosition(position);
+}
+
+
+void DataBase::addDepartment(Department obj)
+{
+    getDepartments().pushBack(obj);
+}
+
+
+void DataBase::removeDepartment(int position)
+{
+    getDepartments().deleteFromPosition(position);
 }
 
 
@@ -243,7 +257,7 @@ Student DataBase::getStudentById(unsigned long id)
 
     while (temp != nullptr)
     {
-        if (temp->data.studentId == id)
+        if (temp->data.id == id)
         {
             return temp->data;
         }
@@ -346,4 +360,127 @@ Department DataBase::getDepartmentById(unsigned long id)
         temp = temp->next;
     }
     return nullptr;
+}
+
+
+bool DataBase::loadDepartments()
+{
+    string str = "";
+    ifstream fin;
+    fin.open(pathDepartments);
+    
+    if ( !fin.is_open() )
+    {
+        return false;
+    }
+    else
+    {
+        string tempStr;
+        while ( getline(fin, tempStr) )
+        {
+            str += tempStr;
+        }
+    }
+    
+    fin.close();
+    
+    Department tempDepartment;
+    getDepartments().pushBack( tempDepartment.deserialize(str) );
+    
+    return true;
+}
+
+
+bool DataBase::unloadDepartments()
+{
+    ofstream fout;
+    fout.open(pathDepartments);
+    
+    if ( !fout.is_open() )
+    {
+        return false;
+    }
+
+    else
+    {
+        string str = "";
+
+        Node<Department> *temp = getDepartments().head;
+        while ( temp != nullptr )
+        {
+            string tempStr = "";
+            tempStr = temp->data.serialize();
+            str += tempStr;
+            temp = temp->next;
+        }
+        
+        fout << str;
+    }
+    
+    fout.close();
+    
+    return true;
+}
+
+
+bool DataBase::loadStudents()
+{
+    string str = "";
+    ifstream fin;
+    fin.open(pathStudents);
+
+    if (!fin.is_open())
+    {
+        return false;
+    }
+
+    else
+    {
+        string tempStr;
+        while (getline(fin, tempStr))
+        {
+            str += tempStr;
+        }
+    }
+
+    fin.close();
+
+    Student tempStudent;
+    getStudents().pushBack(tempStudent.deserialize(str));
+
+    return true;
+
+}
+
+
+bool DataBase::unloadStudents()
+{
+    ofstream fout;
+    fout.open(pathStudents);
+
+    if (!fout.is_open())
+    {
+        return false;
+    }
+
+    else
+    {
+        string str = "";
+
+        Node <Student>* temp = getStudents().head;
+
+        while (temp != nullptr)
+        {
+            string tempStr = "";
+            tempStr = temp->data.serialize();
+            str += tempStr;
+            temp = temp->next;
+        }
+
+        fout << str;     
+    }
+
+    fout.close();
+
+    return true;
 }
