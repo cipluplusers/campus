@@ -11,7 +11,7 @@
 #include "LinkedList.h"
 
 
-using namespace std;
+//using namespace std;
 
 
 class DataBase
@@ -149,6 +149,12 @@ public:
 
 	Department getDepartmentByTitle(string title);
 	Department getDepartmentById(unsigned long id);
+    
+    bool loadDepartments();
+    bool unloadDepartments();
+
+	bool loadStudents();
+	bool unloadStudents();
 };
 
 #endif // !CLASSDATEBASE
