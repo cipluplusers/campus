@@ -129,6 +129,10 @@ public:
 	Subject getSubjectById(unsigned long id);
 	Subject getSubjectByCountOfCredits(unsigned long countOfCredits);
 
+	Student getStudentByName(string name);
+	Student getStudentById(unsigned long id);
+	Student getStudentBySurname(string surname);
+
 	LinkedList<Mark> getMarksBySubjectId(unsigned long subjectId);
 	LinkedList<Mark> getMarksByTeacherId(unsigned long teacherId);
 	LinkedList<Mark> getMarksByStudentId(unsigned long studentId);
@@ -149,6 +153,9 @@ public:
 
 	bool loadStudents();
 	bool unloadStudents();
+
+	bool loadSubject();
+	bool unloadSubject();
 };
 
 #endif // !CLASSDATEBASE

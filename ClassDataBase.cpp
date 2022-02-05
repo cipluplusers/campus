@@ -1,3 +1,6 @@
+#include <iostream>
+#include <string>
+#include <fstream>
 #include "ClassDataBase.h"
 #include "ClassDepartment.h"
 #include "ClassDiary.h"
@@ -7,9 +10,6 @@
 #include "ClassSubject.h"
 #include "ClassTeacher.h"
 #include "LinkedList.h"
-#include <iostream>
-#include <string>
-#include <fstream>
 #include "GlobalConstants.h"
 
 
@@ -250,7 +250,6 @@ Mark DataBase::getMarkById(unsigned long id)
 	return nullptr;
 }
 
-
 Student DataBase::getStudentById(unsigned long id)
 {
     Node<Student>* temp = getStudents().head;
@@ -482,5 +481,50 @@ bool DataBase::unloadStudents()
 
     fout.close();
 
+    return true;
+}
+
+bool DataBase::loadSubject()
+{
+    ifstream fin(pathSubjects);
+
+    if (!fin.is_open())
+    {
+        return false;
+    }
+
+    string temp;
+    while (getline(fin, temp))
+    {
+        Subject tempSubject;
+        getSubjects().pushBack(tempSubject.deserialize(temp))
+    }
+
+    fin.close();
+
+    return true;
+}
+
+
+
+bool DataBase::unloadSubject()
+{
+    ofstream fout(pathSubjects);
+
+    if (!fout.is_open())
+    {
+        return false;
+    }
+
+    Node<Subject>* head = getSubjects().head;
+
+    while (head != nullptr)
+    {
+        string data = head->data.serialize();
+        fout << data;
+        head = head->next;
+    }
+
+    fout.close();
     return true;
 }

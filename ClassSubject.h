@@ -15,8 +15,8 @@ public:
 	unsigned long  subjectCountOfCredits;
 
 	string toString();
-  string serialize();
-  Subject deserialize(string str);
+    string serialize();
+    Subject deserialize(string str);
 
 	friend ostream& operator<< (ostream& out, Subject& subject);
 };
