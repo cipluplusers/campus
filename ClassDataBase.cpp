@@ -1,3 +1,6 @@
+#include <iostream>
+#include <string>
+#include <fstream>
 #include "ClassDataBase.h"
 #include "ClassDepartment.h"
 #include "ClassDiary.h"
@@ -7,9 +10,6 @@
 #include "ClassSubject.h"
 #include "ClassTeacher.h"
 #include "LinkedList.h"
-#include <iostream>
-#include <string>
-#include <fstream>
 #include "GlobalConstants.h"
 
 
@@ -180,51 +180,6 @@ Subject DataBase::getSubjectById(unsigned long id)
     return nullptr;
 }
 
-
-void DataBase::loadSubject(string fileName)
-{
-    ifstream fin(fileName);
-    string data;
-    getline(fin, data);
-    char delim = '|';
-    Node<Subject>* head = getSubjects().head;
-    while (getline(fin, data))
-    {
-        vector<string> arr;
-        while (getline(fin, data, delim))
-        {
-            arr.push_back(data);
-        }
-
-        unsigned long countOfCredits, id;
-        stringstream arr3(arr[3]);
-        arr3 >> id;
-        stringstream arr5(arr[5]);
-        arr5 >> countOfCredits;
-
-        head->data.subjectCaption = arr[1];
-        head->data.subjectCountOfCredits = countOfCredits;
-        head->data.subjectId = id;
-
-        head = head->next;
-    }
-}
-
-
-
-void DataBase::unloadSubject(string fileName)
-{
-    ofstream fout(fileName);
-    Node<Subject>* head = getSubjects().head;
-    while (head != nullptr)
-    {
-        string data = head->data.serialize();
-        fout << data;
-        head = head->next;
-    }
-    fout.close();
-    return;
-}
 
 LinkedList<Mark> DataBase::getMarksBySubjectId(unsigned long subjectId)
 {
@@ -526,5 +481,50 @@ bool DataBase::unloadStudents()
 
     fout.close();
 
+    return true;
+}
+
+bool DataBase::loadSubject()
+{
+    ifstream fin(pathSubjects);
+
+    if (!fin.is_open())
+    {
+        return false;
+    }
+
+    string temp;
+    while (getline(fin, temp))
+    {
+        Subject tempSubject;
+        getSubjects().pushBack(tempSubject.deserialize(temp))
+    }
+
+    fin.close();
+
+    return true;
+}
+
+
+
+bool DataBase::unloadSubject()
+{
+    ofstream fout(pathSubjects);
+
+    if (!fout.is_open())
+    {
+        return false;
+    }
+
+    Node<Subject>* head = getSubjects().head;
+
+    while (head != nullptr)
+    {
+        string data = head->data.serialize();
+        fout << data;
+        head = head->next;
+    }
+
+    fout.close();
     return true;
 }

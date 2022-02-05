@@ -121,8 +121,6 @@ public:
 
 	void addSubject(Subject obj);
 	void removeSubject(int position);
-	void loadSubject(string fileName);
-	void unloadSubject(string fileName);
     
     Diary getDiaryByStudentId(unsigned long StudentId);
     Diary getDiaryById(unsigned long id);
@@ -155,6 +153,9 @@ public:
 
 	bool loadStudents();
 	bool unloadStudents();
+
+	bool loadSubject();
+	bool unloadSubject();
 };
 
 #endif // !CLASSDATEBASE
